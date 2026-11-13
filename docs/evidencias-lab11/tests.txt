@@ -1,0 +1,21 @@
+
+> dae-s11-hooks-del-agente@0.1.0 test
+> vitest run --mode team
+
+
+ RUN  v3.2.7 C:/Users/Alumno/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10
+
+ Ô£ô src/test/useWindowSize.test.jsx (2 tests) 35ms
+ Ô£ô src/test/useAgentRun.test.jsx (18 tests) 89ms
+ Ô£ô src/test/useDebounce.test.jsx (10 tests) 60ms
+ Ô£ô src/test/usePremieres.test.jsx (4 tests) 50ms
+ Ô£ô src/test/usePlans.test.jsx (12 tests) 67ms
+ Ô£ô src/test/App.test.jsx (7 tests) 503ms
+ Ô£ô src/test/Cinema.test.jsx (12 tests) 848ms
+ Ô£ô src/test/Inbox.test.jsx (10 tests) 1062ms
+   Ô£ô Inbox ┬À decidir (las decisiones llegan por props) > aprobar un plan R2 exige el hash exacto  311ms
+
+ Test Files  8 passed (8)
+      Tests  75 passed (75)
+   Start at  15:20:45
+   Duration  3.58s (transform 708ms, setup 2.98s, collect 1.46s, tests 2.71s, environment 9.60s, prepare 1.98s)

@@ -1,4 +1,4 @@
-// TODO (usePlans) — carga los planes del agente con los tres estados de una petición.
+// usePlans — carga los planes del agente con los tres estados de una petición.
 //
 // Qué debe hacer:
 //   usePlans(fetchPlans) recibe una función que devuelve una promesa de planes (en la app es
@@ -25,8 +25,26 @@
 //     dos caminos (.then ok y error) mira `if (!cancelled)` antes de guardar. La LIMPIEZA pone cancelled = true.
 //   · useCallback para que reload tenga siempre la misma identidad.
 //
-// Hoy este hook se queda en "loading" para siempre y nunca pide nada: por eso fallan sus pruebas.
-// Ejecuta `npm test -- usePlans` y mira cuáles.
+// Verificar con `npm test -- usePlans`.
+import { useCallback, useEffect, useState } from "react";
+
 export default function usePlans(fetchPlans) {
-  return { status: "loading", plans: [], error: null, reload: () => {} };
+  const [state, setState] = useState({ status: "loading", plans: [], error: null });
+  const [version, setVersion] = useState(0);
+  const reload = useCallback(() => setVersion((value) => value + 1), []);
+  useEffect(() => {
+    let cancelled = false;
+    setState({ status: "loading", plans: [], error: null });
+    async function load() {
+      try {
+        const plans = await fetchPlans();
+        if (!cancelled) setState({ status: "ready", plans, error: null });
+      } catch (error) {
+        if (!cancelled) setState({ status: "error", plans: [], error });
+      }
+    }
+    load();
+    return () => { cancelled = true; };
+  }, [fetchPlans, version]);
+  return { ...state, reload };
 }

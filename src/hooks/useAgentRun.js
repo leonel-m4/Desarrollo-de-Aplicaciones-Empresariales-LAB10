@@ -1,4 +1,4 @@
-// TODO (useAgentRun) — la máquina de estados de la ejecución de un plan.
+// useAgentRun — la máquina de estados de la ejecución de un plan.
 //
 // Qué debe hacer:
 //   useAgentRun(runAgent) devuelve:
@@ -39,15 +39,45 @@
 //   · Toda respuesta tardía se comprueba con `signal.aborted` antes de tocar el estado.
 //   · Un useEffect sin dependencias ([]) cuya limpieza aborta el controlador: es lo que corre al desmontar.
 //
-// Hoy este hook no hace nada: se queda en "idle". Ejecuta `npm test -- useAgentRun` y mira qué falla.
+// Verificar con `npm test -- useAgentRun`.
+import { useEffect, useRef, useState } from "react";
+
+const idle = { status: "idle", plan: null, result: null, error: null };
+
 export default function useAgentRun(runAgent) {
-  return {
-    status: "idle",
-    plan: null,
-    result: null,
-    error: null,
-    start: () => {},
-    approve: () => {},
-    reject: () => {},
-  };
+  const [state, setState] = useState(idle);
+  const current = useRef(idle);
+  const controller = useRef(null);
+  function update(next) {
+    current.current = next;
+    setState(next);
+  }
+  useEffect(() => () => controller.current?.abort(), []);
+  function start(plan) {
+    if (!runAgent || ["running", "awaiting_approval"].includes(current.current.status)) return;
+    const request = new AbortController();
+    controller.current = request;
+    update({ status: "running", plan, result: null, error: null });
+    async function execute() {
+      try {
+        const result = await runAgent(plan, { signal: request.signal });
+        if (!request.signal.aborted) {
+          update({ status: plan.risk === "R2" ? "awaiting_approval" : "done", plan, result, error: null });
+        }
+      } catch (error) {
+        if (!request.signal.aborted) update({ status: "error", plan, result: null, error });
+      }
+    }
+    execute();
+  }
+  function approve() {
+    if (current.current.status === "awaiting_approval") update({ ...current.current, status: "done" });
+  }
+  function reject() {
+    if (["running", "awaiting_approval"].includes(current.current.status)) {
+      controller.current?.abort();
+      update(idle);
+    }
+  }
+  return { ...state, start, approve, reject };
 }

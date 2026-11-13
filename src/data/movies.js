@@ -1,0 +1,18 @@
+// Local fixtures shaped like an external API. All consumers receive adapted movies.
+export const rawMovies = [
+  { id: 1, title: "Interestelar", release_date: "2014-11-07", genre: "Ciencia ficción", runtime: 169, vote_average: 8.7, color: "#46626c", poster_path: "/posters/interestelar.svg", overview: "Un grupo de exploradores viaja más allá de nuestra galaxia para encontrar un futuro entre las estrellas." },
+  { id: 2, title: "Dune: Parte dos", release_date: "2024-03-01", genre: "Ciencia ficción", runtime: 166, vote_average: 8.5, color: "#b9753d", poster_path: "/posters/dune.svg", overview: "Paul Atreides se une a los Fremen en el desierto de Arrakis, donde el destino de un universo está en juego." },
+  { id: 3, title: "El gran hotel Budapest", release_date: "2014-03-28", genre: "Comedia", runtime: 99, vote_average: 8.1, color: "#b46f85", poster_path: "/posters/budapest.svg", overview: "Un legendario conserje y su joven protegido viven una aventura extraordinaria en un hotel europeo." },
+  { id: 4, title: "La La Land", release_date: "2016-12-09", genre: "Musical", runtime: 128, vote_average: 8.0, color: "#58518a", poster_path: "/posters/lalaland.svg", overview: "Una actriz y un pianista persiguen sus sueños bajo las luces de Los Ángeles." },
+  { id: 5, title: "El viaje de Chihiro", release_date: "2001-07-20", genre: "Animación", runtime: 125, vote_average: 8.6, color: "#458177", poster_path: "/posters/chihiro.svg", overview: "Chihiro descubre un mundo de espíritus y deberá encontrar el valor para volver a casa." },
+  { id: 6, title: "Oppenheimer", release_date: "2023-07-21", genre: "Drama", runtime: 180, vote_average: 8.3, color: "#a35032", poster_path: "/posters/oppenheimer.svg", overview: "El físico J. Robert Oppenheimer afronta las consecuencias de un descubrimiento que cambia la historia." },
+  { id: 7, title: "Spider-Man: Un nuevo universo", release_date: "2018-12-14", genre: "Animación", runtime: 117, vote_average: 8.4, color: "#82436a", poster_path: "/posters/spiderman.svg", overview: "Miles Morales descubre que cualquiera puede llevar la máscara en una aventura entre universos." },
+  { id: 8, title: "La llegada", release_date: "2016-11-11", genre: "Ciencia ficción", runtime: 116, vote_average: 7.9, color: "#557578", poster_path: "/posters/llegada.svg", overview: "Una lingüista intenta descifrar un mensaje extraterrestre que transformará su manera de entender el tiempo." },
+];
+
+export const rawPremieres = [
+  { id: 101, title: "Horizonte azul", release_date: "2026-11-20", genre: "Aventura", runtime: 112, vote_average: 0, color: "#326979", poster_path: "/posters/horizonte.svg", label: "20 NOV · PRÓXIMAMENTE", overview: "Una expedición descubre que el océano todavía guarda historias por contar." },
+  { id: 102, title: "La última estación", release_date: "2026-11-27", genre: "Drama", runtime: 104, vote_average: 0, color: "#956042", poster_path: "/posters/estacion.svg", label: "27 NOV · PRÓXIMAMENTE", overview: "Dos desconocidos coinciden en un viaje que cambiará el rumbo de sus vidas." },
+  { id: 103, title: "Órbita", release_date: "2026-12-04", genre: "Ciencia ficción", runtime: 121, vote_average: 0, color: "#545b8b", poster_path: "/posters/orbita.svg", label: "04 DIC · PRÓXIMAMENTE", overview: "Una astronauta recibe una señal imposible desde el otro lado del sistema solar." },
+  { id: 104, title: "El bosque de luz", release_date: "2026-12-11", genre: "Animación", runtime: 96, vote_average: 0, color: "#52785b", poster_path: "/posters/bosque.svg", label: "11 DIC · PRÓXIMAMENTE", overview: "Una pequeña viajera protege un bosque donde cada árbol guarda un recuerdo." },
+];

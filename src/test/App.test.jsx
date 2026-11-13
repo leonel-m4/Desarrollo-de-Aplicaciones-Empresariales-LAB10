@@ -1,6 +1,6 @@
 import { act, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import App from "../App";
+import App from "../ApprovalApp";
 import Header from "../components/Header";
 import { plans } from "../data/plans";
 import { deferred, makePlans, STORAGE_KEY } from "./fixtures";
