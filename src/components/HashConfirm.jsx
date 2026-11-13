@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 
-// Confirmation is local to this plan and requires an exact, case-sensitive match.
+// Already written (week 10). `typed` is the only state; "is the button enabled?" is derived from it.
 export default function HashConfirm({ hash, onConfirm }) {
   const [typed, setTyped] = useState("");
 

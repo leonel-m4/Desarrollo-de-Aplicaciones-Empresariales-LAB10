@@ -259,3 +259,151 @@ code {
 .decided-rejected strong {
   color: var(--danger);
 }
+
+.app-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pending-counter {
+  margin: 0;
+  background: var(--primary);
+  color: #fff !important;
+  border-radius: 999px;
+  padding: 4px 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin: 14px 0 0;
+}
+
+.network-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+}
+
+.reload-link {
+  font: inherit;
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+}
+
+.skeleton {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.skeleton-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.skeleton-line {
+  display: block;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+.skeleton-title {
+  width: 40%;
+  height: 16px;
+}
+
+.skeleton-short {
+  width: 60%;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.error-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 12px 16px;
+  border: 1px solid var(--danger);
+  border-left-width: 6px;
+  border-radius: 10px;
+  background: #fef2f2;
+}
+
+.error-banner p {
+  margin: 0;
+}
+
+.run-list {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.run-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.run-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  border: 1px solid var(--line);
+}
+
+.run-status p {
+  margin: 0;
+  flex: 1 1 260px;
+}
+
+.run-awaiting_approval {
+  background: #fff7ed;
+  border-color: var(--r2);
+}
+
+.run-done {
+  background: #ecfdf5;
+  border-color: var(--ok);
+}
+
+.run-error {
+  background: #fef2f2;
+  border-color: var(--danger);
+}

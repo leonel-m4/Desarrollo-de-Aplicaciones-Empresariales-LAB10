@@ -1,13 +1,13 @@
 // Vite + Vitest configuration.
 //
-// The tests import the components through the alias "@impl". Which folder that alias points to
-// depends on the MODE (see the .env.<mode> files and the scripts in package.json):
+// The components and the tests import the hooks through the alias "@hooks". Which folder that alias points
+// to depends on the MODE (see the .env.<mode> files and the scripts in package.json):
 //
-//   team       -> src/components      (your code, with the TODOs)        npm test
-//   ai         -> src/ai              (the version "written by an AI")   npm run test:ai
+//   team       -> src/hooks           (your code, with the TODOs)         npm test
+//   ai         -> src/ai              (the hooks "written by an AI")      npm run test:ai
 //   solutions  -> teacher/solutions   (only exists in the teacher's copy) npm run test:solutions
 //
-// `npm run dev` and `npm run build` never use the alias: the app always uses src/components.
+// `npm run dev` and `npm run build` have no mode file: they use "team", that is, src/hooks.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -18,7 +18,7 @@ import { defineConfig } from "vitest/config";
 const root = path.dirname(fileURLToPath(import.meta.url));
 
 const SOURCES = {
-  team: "src/components",
+  team: "src/hooks",
   ai: "src/ai",
   solutions: "teacher/solutions",
 };
@@ -42,7 +42,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
-    resolve: { alias: { "@impl": path.join(root, folder) } },
+    resolve: { alias: { "@hooks": path.join(root, folder) } },
     test: {
       environment: "jsdom",
       globals: true,

@@ -1,40 +1,29 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import PlanCard from "./PlanCard";
+import RunPanel from "./RunPanel";
+import useDebounce from "@hooks/useDebounce";
 import { targetLabel, VERDICT_LABELS } from "../lib/plans";
-import { readStoredDecisions, writeStoredDecisions } from "../lib/storage";
 
-// Own the decisions shared by the lists and counters; derive everything else.
-export default function Inbox({ plans }) {
-  // Read storage only when initializing this instance, not on every render.
-  const [decisions, setDecisions] = useState(readStoredDecisions);
+// Already written. The inbox does NOT own the decisions: App does (the header needs the pending counter too),
+// so they arrive by props, together with the function that changes them. The inbox only remembers what is typed.
+export default function Inbox({ plans, decisions, onDecide, runAgent }) {
   const [query, setQuery] = useState("");
+  // The list reacts to the quiet value (300 ms without typing); the text box shows what is typed right now.
+  const quietQuery = useDebounce(query, 300);
 
-  function decide(id, verdict) {
-    setDecisions((current) => ({ ...current, [id]: verdict }));
-  }
-
-  // Filtering must not change the complete pending and decided counts.
   const pending = plans.filter((plan) => !(plan.id in decisions));
   const decided = plans.filter((plan) => plan.id in decisions);
-  const needle = query.trim().toLowerCase();
+  const approved = decided.filter((plan) => decisions[plan.id] === "approved");
+  const needle = quietQuery.trim().toLowerCase();
   const visible = pending.filter(
     (plan) => plan.op.toLowerCase().includes(needle) || targetLabel(plan.target).toLowerCase().includes(needle)
   );
-
-  function clearSearch() {
-    setQuery("");
-  }
-
-  useEffect(() => {
-    writeStoredDecisions(decisions);
-  }, [decisions]);
 
   return (
     <section className="inbox" aria-labelledby="inbox-title">
       <h2 id="inbox-title">Planes del agente</h2>
 
       <p className="counters">
-        <span>Pendientes: {pending.length}</span>
         <span>Decididos: {decided.length}</span>
       </p>
 
@@ -48,13 +37,13 @@ export default function Inbox({ plans }) {
         {visible.length > 0 ? (
           <div className="plan-list">
             {visible.map((plan) => (
-              <PlanCard key={plan.id} plan={plan} onDecide={decide} />
+              <PlanCard key={plan.id} plan={plan} onDecide={onDecide} />
             ))}
           </div>
-        ) : query.trim() !== "" ? (
+        ) : needle !== "" ? (
           <div className="empty">
             <p>No hay planes que coincidan</p>
-            <button type="button" onClick={clearSearch}>
+            <button type="button" onClick={() => setQuery("")}>
               Limpiar búsqueda
             </button>
           </div>
@@ -77,6 +66,8 @@ export default function Inbox({ plans }) {
           <p className="empty">Aún no has decidido ningún plan.</p>
         )}
       </section>
+
+      <RunPanel approvedPlans={approved} runAgent={runAgent} />
     </section>
   );
 }

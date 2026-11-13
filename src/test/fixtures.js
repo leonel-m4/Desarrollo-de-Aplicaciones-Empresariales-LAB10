@@ -1,5 +1,5 @@
 // Small, fixed data for the tests. A function, so each test gets its own fresh copy.
-export const STORAGE_KEY = "dae-s10-decisions";
+export const STORAGE_KEY = "dae-s11-decisions";
 
 export function makePlans() {
   return [
@@ -44,4 +44,15 @@ export function deepFreeze(value) {
     Object.values(value).forEach(deepFreeze);
   }
   return value;
+}
+
+/** A promise that the TEST resolves or rejects when it wants. No real waiting, so no flaky timing. */
+export function deferred() {
+  let resolve;
+  let reject;
+  const promise = new Promise((res, rej) => {
+    resolve = res;
+    reject = rej;
+  });
+  return { promise, resolve, reject };
 }
