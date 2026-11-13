@@ -1,0 +1,128 @@
+
+> dae-s10-bandeja-aprobaciones@0.1.0 test:ai
+> vitest run --mode ai --reporter=default --reporter=json --outputFile=docs/evidencias/12-ai-02-inmutabilidad.json --no-color
+
+
+ RUN  v3.2.7 C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10
+
+ Ô£ô src/test/App.test.jsx (2 tests) 530ms
+   Ô£ô App ┬À prueba de humo con los datos reales > dibuja el t├¡tulo y un plan por cada elemento de plans.js  516ms
+ Ô£ô src/test/untrusted.test.jsx (3 tests) 721ms
+   Ô£ô Texto de terceros: se muestra, no se obedece > no cambia ninguna decisi├│n: todo sigue pendiente y no se guarda nada  360ms
+ Ô£ô src/test/Button.test.jsx (12 tests) 806ms
+   Ô£ô Button ┬À variantes y contenido > muestra su contenido (children) como texto del bot├│n  333ms
+ ÔØ» src/test/PlanCard.test.jsx (10 tests | 1 failed) 1289ms
+   Ô£ô PlanCard ┬À muestra el plan como texto > de un plan R2 muestra operaci├│n, riesgo, destino, proponente y hash 183ms
+   Ô£ô PlanCard ┬À muestra el plan como texto > de un plan R1 muestra el riesgo R1 y el texto de la pregunta 35ms
+   Ô£ô PlanCard ┬À plan R1: decidir con un clic > ofrece Aprobar y Rechazar, sin pedir ning├║n hash 288ms
+   Ô£ô PlanCard ┬À plan R1: decidir con un clic > no avisa al padre al dibujarse 28ms
+   Ô£ô PlanCard ┬À plan R1: decidir con un clic > Aprobar avisa una vez con el id y approved 122ms
+   Ô£ô PlanCard ┬À plan R1: decidir con un clic > Rechazar avisa una vez con el id y rejected 86ms
+   Ô£ô PlanCard ┬À plan R2: el hash va por HashConfirm > muestra un campo para el hash en lugar de un bot├│n Aprobar suelto 28ms
+   Ô£ô PlanCard ┬À plan R2: el hash va por HashConfirm > escribir el hash del plan y pulsar Aprobar avisa una vez con approved  349ms
+   Ô£ô PlanCard ┬À plan R2: el hash va por HashConfirm > Rechazar no necesita hash 78ms
+   ├ù PlanCard ┬À es controlada por el padre > tras decidir no se marca como decidida por su cuenta: solo avisa 87ms
+     ÔåÆ [2mexpect([22m[31melement[39m[2m).not.toBeInTheDocument()[22m
+
+[31mexpected document not to contain element, found <p
+  class="plan-card-verdict"
+>
+  Decidido: 
+  Aprobado
+</p> instead[39m
+ ÔØ» src/test/HashConfirm.test.jsx (12 tests | 2 failed) 3084ms
+   Ô£ô HashConfirm ┬À la barrera del hash > pide un hash y ofrece el bot├│n Aprobar  376ms
+   Ô£ô HashConfirm ┬À la barrera del hash > Aprobar empieza deshabilitado 48ms
+   Ô£ô HashConfirm ┬À la barrera del hash > Aprobar se habilita solo cuando lo escrito es exactamente el hash  460ms
+   ├ù HashConfirm ┬À la barrera del hash > no se habilita con el hash m├ís texto de sobra 302ms
+     ÔåÆ [2mexpect([22m[31melement[39m[2m).toBeDisabled()[22m
+
+Received element is not disabled:
+  [31m<button
+  class="btn btn-danger"
+  type="button"
+/>[39m
+   ├ù HashConfirm ┬À la barrera del hash > no se habilita con texto antes del hash 276ms
+     ÔåÆ [2mexpect([22m[31melement[39m[2m).toBeDisabled()[22m
+
+Received element is not disabled:
+  [31m<button
+  class="btn btn-danger"
+  type="button"
+/>[39m
+   Ô£ô HashConfirm ┬À la barrera del hash > distingue may├║sculas de min├║sculas 274ms
+   Ô£ô HashConfirm ┬À la barrera del hash > se vuelve a deshabilitar si se borra una letra 290ms
+   Ô£ô HashConfirm ┬À la barrera del hash > si cambia el hash recibido, lo escrito deja de valer 234ms
+   Ô£ô HashConfirm ┬À entrada controlada y evento > lo que se escribe aparece en el campo 117ms
+   Ô£ô HashConfirm ┬À entrada controlada y evento > con el hash exacto, un clic llama a onConfirm una vez 289ms
+   Ô£ô HashConfirm ┬À entrada controlada y evento > no llama a onConfirm al dibujarse ni al escribir 245ms
+   Ô£ô HashConfirm ┬À entrada controlada y evento > con el hash incorrecto, hacer clic no llama a onConfirm 167ms
+ Ô£ô src/test/Inbox.test.jsx (22 tests) 4413ms
+   Ô£ô Inbox ┬À punto de partida > muestra todos los planes como pendientes y ninguno como decidido  535ms
+   Ô£ô Inbox ┬À decidir (estado y funciones que suben) > aprobar un plan R2 escribiendo su hash tambi├®n lo mueve a Decididos  407ms
+   Ô£ô Inbox ┬À no modifica lo que recibe > buscar y decidir no tocan el arreglo plans ni sus planes  376ms
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ» Failed Tests 3 ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+
+ FAIL  src/test/HashConfirm.test.jsx > HashConfirm ┬À la barrera del hash > no se habilita con el hash m├ís texto de sobra
+
+Error: expect(element).toBeDisabled()
+
+Received element is not disabled:
+  <button
+  class="btn btn-danger"
+  type="button"
+/>
+ ÔØ» src/test/HashConfirm.test.jsx:37:23
+     35|     render(<HashConfirm hash={HASH} onConfirm={() => {}} />);
+     36|     await user.type(field(), `${HASH}x`);
+     37|     expect(approve()).toBeDisabled();
+       |                       ^
+     38|   });
+     39| 
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[1/3]ÔÄ»
+
+ FAIL  src/test/HashConfirm.test.jsx > HashConfirm ┬À la barrera del hash > no se habilita con texto antes del hash
+Error: expect(element).toBeDisabled()
+
+Received element is not disabled:
+  <button
+  class="btn btn-danger"
+  type="button"
+/>
+ ÔØ» src/test/HashConfirm.test.jsx:44:23
+     42|     render(<HashConfirm hash={HASH} onConfirm={() => {}} />);
+     43|     await user.type(field(), `ok ${HASH}`);
+     44|     expect(approve()).toBeDisabled();
+       |                       ^
+     45|   });
+     46| 
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[2/3]ÔÄ»
+
+ Test Files  2 failed | 4 passed (6)
+      Tests  3 failed | 58 passed (61)
+   Start at  01:19:49
+   Duration  10.32s (transform 696ms, setup 3.55s, collect 5.95s, tests 10.84s, environment 17.53s, prepare 2.78s)
+
+JSON report written to C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10/docs/evidencias/12-ai-02-inmutabilidad.json
+ FAIL  src/test/PlanCard.test.jsx > PlanCard ┬À es controlada por el padre > tras decidir no se marca como decidida por su cuenta: solo avisa
+Error: expect(element).not.toBeInTheDocument()
+
+expected document not to contain element, found <p
+  class="plan-card-verdict"
+>
+  Decidido: 
+  Aprobado
+</p> instead
+ ÔØ» src/test/PlanCard.test.jsx:88:48
+     86|     expect(onDecide).toHaveBeenCalledTimes(1);
+     87| 
+     88|     expect(screen.queryByText(/decidid/i)).not.toBeInTheDocument();
+       |                                                ^
+     89|     expect(screen.getByRole("button", { name: "Aprobar" })).toBeInTheDÔÇª
+     90|     expect(screen.getByRole("button", { name: "Rechazar" })).toBeInTheÔÇª
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[3/3]ÔÄ»
+

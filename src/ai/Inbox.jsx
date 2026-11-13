@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PlanCard from "./PlanCard";
 import { targetLabel, VERDICT_LABELS } from "../lib/plans";
 import { readStoredDecisions, writeStoredDecisions } from "../lib/storage";
@@ -8,10 +8,12 @@ export default function Inbox({ plans }) {
   const [query, setQuery] = useState("");
 
   const decide = (id, verdict) => {
-    decisions[id] = verdict;
-    setDecisions(decisions);
-    writeStoredDecisions(decisions);
+    setDecisions((current) => ({ ...current, [id]: verdict }));
   };
+
+  useEffect(() => {
+    writeStoredDecisions(decisions);
+  }, [decisions]);
 
   const clearSearch = () => setQuery("");
 
