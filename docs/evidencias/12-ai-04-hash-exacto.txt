@@ -1,0 +1,31 @@
+
+> dae-s10-bandeja-aprobaciones@0.1.0 test:ai
+> vitest run --mode ai --reporter=default --reporter=json --outputFile=docs/evidencias/12-ai-04-hash-exacto.json --no-color
+
+
+ RUN  v3.2.7 C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10
+
+ Ô£ô src/test/App.test.jsx (2 tests) 527ms
+   Ô£ô App ┬À prueba de humo con los datos reales > dibuja el t├¡tulo y un plan por cada elemento de plans.js  512ms
+ Ô£ô src/test/untrusted.test.jsx (3 tests) 688ms
+   Ô£ô Texto de terceros: se muestra, no se obedece > no cambia ninguna decisi├│n: todo sigue pendiente y no se guarda nada  349ms
+ Ô£ô src/test/Button.test.jsx (12 tests) 778ms
+   Ô£ô Button ┬À variantes y contenido > muestra su contenido (children) como texto del bot├│n  332ms
+ Ô£ô src/test/PlanCard.test.jsx (10 tests) 1230ms
+   Ô£ô PlanCard ┬À plan R2: el hash va por HashConfirm > escribir el hash del plan y pulsar Aprobar avisa una vez con approved  356ms
+ Ô£ô src/test/HashConfirm.test.jsx (12 tests) 3168ms
+   Ô£ô HashConfirm ┬À la barrera del hash > pide un hash y ofrece el bot├│n Aprobar  388ms
+   Ô£ô HashConfirm ┬À la barrera del hash > Aprobar se habilita solo cuando lo escrito es exactamente el hash  444ms
+   Ô£ô HashConfirm ┬À la barrera del hash > se vuelve a deshabilitar si se borra una letra  334ms
+   Ô£ô HashConfirm ┬À entrada controlada y evento > con el hash exacto, un clic llama a onConfirm una vez  320ms
+ Ô£ô src/test/Inbox.test.jsx (22 tests) 4313ms
+   Ô£ô Inbox ┬À punto de partida > muestra todos los planes como pendientes y ninguno como decidido  527ms
+   Ô£ô Inbox ┬À decidir (estado y funciones que suben) > aprobar un plan R2 escribiendo su hash tambi├®n lo mueve a Decididos  360ms
+   Ô£ô Inbox ┬À no modifica lo que recibe > buscar y decidir no tocan el arreglo plans ni sus planes  349ms
+
+ Test Files  6 passed (6)
+      Tests  61 passed (61)
+   Start at  01:21:03
+   Duration  10.11s (transform 865ms, setup 3.74s, collect 5.57s, tests 10.70s, environment 17.36s, prepare 2.91s)
+
+JSON report written to C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10/docs/evidencias/12-ai-04-hash-exacto.json
