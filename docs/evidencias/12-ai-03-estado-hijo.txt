@@ -1,0 +1,93 @@
+
+> dae-s10-bandeja-aprobaciones@0.1.0 test:ai
+> vitest run --mode ai --reporter=default --reporter=json --outputFile=docs/evidencias/12-ai-03-estado-hijo.json --no-color
+
+
+ RUN  v3.2.7 C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10
+
+ Ô£ô src/test/App.test.jsx (2 tests) 524ms
+   Ô£ô App ┬À prueba de humo con los datos reales > dibuja el t├¡tulo y un plan por cada elemento de plans.js  511ms
+ Ô£ô src/test/untrusted.test.jsx (3 tests) 654ms
+   Ô£ô Texto de terceros: se muestra, no se obedece > no cambia ninguna decisi├│n: todo sigue pendiente y no se guarda nada  308ms
+ Ô£ô src/test/Button.test.jsx (12 tests) 809ms
+   Ô£ô Button ┬À variantes y contenido > muestra su contenido (children) como texto del bot├│n  315ms
+ Ô£ô src/test/PlanCard.test.jsx (10 tests) 1242ms
+   Ô£ô PlanCard ┬À plan R2: el hash va por HashConfirm > escribir el hash del plan y pulsar Aprobar avisa una vez con approved  349ms
+ ÔØ» src/test/HashConfirm.test.jsx (12 tests | 2 failed) 3211ms
+   Ô£ô HashConfirm ┬À la barrera del hash > pide un hash y ofrece el bot├│n Aprobar  349ms
+   Ô£ô HashConfirm ┬À la barrera del hash > Aprobar empieza deshabilitado 41ms
+   Ô£ô HashConfirm ┬À la barrera del hash > Aprobar se habilita solo cuando lo escrito es exactamente el hash  473ms
+   ├ù HashConfirm ┬À la barrera del hash > no se habilita con el hash m├ís texto de sobra 322ms
+     ÔåÆ [2mexpect([22m[31melement[39m[2m).toBeDisabled()[22m
+
+Received element is not disabled:
+  [31m<button
+  class="btn btn-danger"
+  type="button"
+/>[39m
+   ├ù HashConfirm ┬À la barrera del hash > no se habilita con texto antes del hash 282ms
+     ÔåÆ [2mexpect([22m[31melement[39m[2m).toBeDisabled()[22m
+
+Received element is not disabled:
+  [31m<button
+  class="btn btn-danger"
+  type="button"
+/>[39m
+   Ô£ô HashConfirm ┬À la barrera del hash > distingue may├║sculas de min├║sculas 223ms
+   Ô£ô HashConfirm ┬À la barrera del hash > se vuelve a deshabilitar si se borra una letra  369ms
+   Ô£ô HashConfirm ┬À la barrera del hash > si cambia el hash recibido, lo escrito deja de valer 267ms
+   Ô£ô HashConfirm ┬À entrada controlada y evento > lo que se escribe aparece en el campo 110ms
+   Ô£ô HashConfirm ┬À entrada controlada y evento > con el hash exacto, un clic llama a onConfirm una vez  326ms
+   Ô£ô HashConfirm ┬À entrada controlada y evento > no llama a onConfirm al dibujarse ni al escribir 250ms
+   Ô£ô HashConfirm ┬À entrada controlada y evento > con el hash incorrecto, hacer clic no llama a onConfirm 190ms
+ Ô£ô src/test/Inbox.test.jsx (22 tests) 4466ms
+   Ô£ô Inbox ┬À punto de partida > muestra todos los planes como pendientes y ninguno como decidido  464ms
+   Ô£ô Inbox ┬À decidir (estado y funciones que suben) > aprobar un plan R1 lo saca de Pendientes y lo pone en Decididos como Aprobado  309ms
+   Ô£ô Inbox ┬À decidir (estado y funciones que suben) > aprobar un plan R2 escribiendo su hash tambi├®n lo mueve a Decididos  470ms
+   Ô£ô Inbox ┬À no modifica lo que recibe > buscar y decidir no tocan el arreglo plans ni sus planes  331ms
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ» Failed Tests 2 ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+
+ FAIL  src/test/HashConfirm.test.jsx > HashConfirm ┬À la barrera del hash > no se habilita con el hash m├ís texto de sobra
+Error: expect(element).toBeDisabled()
+
+Received element is not disabled:
+
+  <button
+  class="btn btn-danger"
+  type="button"
+/>
+ Test Files  1 failed | 5 passed (6)
+      Tests  2 failed | 59 passed (61)
+   Start at  01:20:30
+   Duration  10.17s (transform 760ms, setup 3.67s, collect 5.56s, tests 10.91s, environment 17.46s, prepare 2.68s)
+
+JSON report written to C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10/docs/evidencias/12-ai-03-estado-hijo.json
+ ÔØ» src/test/HashConfirm.test.jsx:37:23
+     35|     render(<HashConfirm hash={HASH} onConfirm={() => {}} />);
+     36|     await user.type(field(), `${HASH}x`);
+     37|     expect(approve()).toBeDisabled();
+       |                       ^
+     38|   });
+     39| 
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[1/2]ÔÄ»
+
+ FAIL  src/test/HashConfirm.test.jsx > HashConfirm ┬À la barrera del hash > no se habilita con texto antes del hash
+Error: expect(element).toBeDisabled()
+
+Received element is not disabled:
+  <button
+  class="btn btn-danger"
+  type="button"
+/>
+ ÔØ» src/test/HashConfirm.test.jsx:44:23
+     42|     render(<HashConfirm hash={HASH} onConfirm={() => {}} />);
+     43|     await user.type(field(), `ok ${HASH}`);
+     44|     expect(approve()).toBeDisabled();
+       |                       ^
+     45|   });
+     46| 
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[2/2]ÔÄ»
+
