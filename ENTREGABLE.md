@@ -153,6 +153,6 @@ Las pruebas automatizadas verifican estos contratos funcionales. La comprobació
 
 ## 9. Autoría, publicación y presentación
 
-Implementación y documentación preparadas con asistencia de IA a solicitud del autor; el equipo debe revisar el resultado antes de presentarlo. Se conservaron los archivos de la entrega anterior con nombres diferenciados.
+Implementación y documentación preparadas con asistencia de IA a solicitud del autor; el equipo debe revisar el resultado antes de presentarlo. Los entregables incluidos en esta rama corresponden únicamente al laboratorio 11.
 
 La rama de entrega es `lab11`. El envío del PDF al campus requiere la cuenta del alumno y una confirmación de recepción del propio campus: **no está realizado por el asistente ni se considera demostrado por la presencia del archivo en GitHub**.

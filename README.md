@@ -49,7 +49,7 @@ public/posters/            Ilustraciones locales
 src/test/                  Pruebas de cartelera y de regresión
 ```
 
-La bandeja anterior se conserva en `src/ApprovalApp.jsx` para no perder su implementación ni sus pruebas. `src/test/App.test.jsx` ahora importa esa composición archivada; sus expectativas originales no se cambiaron. La pantalla principal y sus nuevas pruebas están en `src/App.jsx` y `src/test/Cinema.test.jsx`. La documentación anterior permanece en `README-APROBACIONES.md` y `ENTREGABLE-LAB10.md`.
+La bandeja anterior se conserva en `src/ApprovalApp.jsx` para no perder su implementación ni sus pruebas. `src/test/App.test.jsx` ahora importa esa composición archivada; sus expectativas originales no se cambiaron. La pantalla principal y sus nuevas pruebas están en `src/App.jsx` y `src/test/Cinema.test.jsx`. La documentación de esa aplicación permanece en `README-APROBACIONES.md`. Los entregables de esta rama corresponden únicamente al laboratorio 11.
 
 ## Entrega
 
