@@ -1,0 +1,31 @@
+
+> dae-s10-bandeja-aprobaciones@0.1.0 test
+> vitest run --mode team --reporter=default --reporter=json --outputFile=docs/evidencias/09-team-completo.json --no-color
+
+
+ RUN  v3.2.7 C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10
+
+ Ô£ô src/test/App.test.jsx (2 tests) 518ms
+   Ô£ô App ┬À prueba de humo con los datos reales > dibuja el t├¡tulo y un plan por cada elemento de plans.js  504ms
+ Ô£ô src/test/untrusted.test.jsx (3 tests) 662ms
+   Ô£ô Texto de terceros: se muestra, no se obedece > no cambia ninguna decisi├│n: todo sigue pendiente y no se guarda nada  323ms
+ Ô£ô src/test/Button.test.jsx (12 tests) 807ms
+   Ô£ô Button ┬À variantes y contenido > muestra su contenido (children) como texto del bot├│n  308ms
+ Ô£ô src/test/PlanCard.test.jsx (10 tests) 1289ms
+   Ô£ô PlanCard ┬À plan R2: el hash va por HashConfirm > escribir el hash del plan y pulsar Aprobar avisa una vez con approved  350ms
+ Ô£ô src/test/HashConfirm.test.jsx (12 tests) 3084ms
+   Ô£ô HashConfirm ┬À la barrera del hash > pide un hash y ofrece el bot├│n Aprobar  353ms
+   Ô£ô HashConfirm ┬À la barrera del hash > Aprobar se habilita solo cuando lo escrito es exactamente el hash  445ms
+   Ô£ô HashConfirm ┬À la barrera del hash > se vuelve a deshabilitar si se borra una letra  322ms
+   Ô£ô HashConfirm ┬À entrada controlada y evento > con el hash exacto, un clic llama a onConfirm una vez  306ms
+ Ô£ô src/test/Inbox.test.jsx (22 tests) 4451ms
+   Ô£ô Inbox ┬À punto de partida > muestra todos los planes como pendientes y ninguno como decidido  551ms
+   Ô£ô Inbox ┬À decidir (estado y funciones que suben) > aprobar un plan R2 escribiendo su hash tambi├®n lo mueve a Decididos  431ms
+   Ô£ô Inbox ┬À no modifica lo que recibe > buscar y decidir no tocan el arreglo plans ni sus planes  349ms
+
+ Test Files  6 passed (6)
+      Tests  61 passed (61)
+   Start at  01:17:00
+   Duration  10.16s (transform 562ms, setup 3.69s, collect 5.35s, tests 10.81s, environment 17.19s, prepare 2.80s)
+
+JSON report written to C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10/docs/evidencias/09-team-completo.json

@@ -1,0 +1,15 @@
+
+> dae-s10-bandeja-aprobaciones@0.1.0 test
+> vitest run --mode team Button --reporter=default --reporter=json --outputFile=docs/evidencias/03-button.json --no-color
+
+
+ RUN  v3.2.7 C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10
+
+ Ô£ô src/test/Button.test.jsx (12 tests) 501ms
+
+ Test Files  1 passed (1)
+      Tests  12 passed (12)
+   Start at  01:14:20
+   Duration  4.76s (transform 111ms, setup 446ms, collect 671ms, tests 501ms, environment 2.05s, prepare 385ms)
+
+JSON report written to C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10/docs/evidencias/03-button.json

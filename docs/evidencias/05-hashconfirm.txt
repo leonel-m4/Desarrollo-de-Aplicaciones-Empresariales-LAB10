@@ -1,0 +1,17 @@
+
+> dae-s10-bandeja-aprobaciones@0.1.0 test
+> vitest run --mode team HashConfirm --reporter=default --reporter=json --outputFile=docs/evidencias/05-hashconfirm.json --no-color
+
+
+ RUN  v3.2.7 C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10
+
+ Ô£ô src/test/HashConfirm.test.jsx (12 tests) 2699ms
+   Ô£ô HashConfirm ┬À la barrera del hash > Aprobar se habilita solo cuando lo escrito es exactamente el hash  325ms
+   Ô£ô HashConfirm ┬À la barrera del hash > se vuelve a deshabilitar si se borra una letra  339ms
+
+ Test Files  1 passed (1)
+      Tests  12 passed (12)
+   Start at  01:14:50
+   Duration  6.82s (transform 122ms, setup 461ms, collect 699ms, tests 2.70s, environment 1.93s, prepare 337ms)
+
+JSON report written to C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10/docs/evidencias/05-hashconfirm.json

@@ -1,0 +1,6094 @@
+
+> dae-s10-bandeja-aprobaciones@0.1.0 test
+> vitest run --mode team Inbox --reporter=default --reporter=json --outputFile=docs/evidencias/06-inbox-estado.json --no-color
+
+
+ RUN  v3.2.7 C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10
+
+ ÔØ» src/test/Inbox.test.jsx (22 tests | 20 failed) 4225ms
+   Ô£ô Inbox ┬À punto de partida > muestra todos los planes como pendientes y ninguno como decidido 248ms
+   ├ù Inbox ┬À decidir (estado y funciones que suben) > aprobar un plan R1 lo saca de Pendientes y lo pone en Decididos como Aprobado 184ms
+     ÔåÆ [2mexpect([22m[31melement[39m[2m).not.toBeInTheDocument()[22m
+
+[31mexpected document not to contain element, found <article
+  aria-label="Plan T-02"
+  class="plan-card plan-card-r1"
+>
+  <header
+    class="plan-card-header"
+  >
+    <h4>
+      questions_create
+    </h4>
+    <span
+      class="badge"
+    >
+      R1 ┬À crea datos
+    </span>
+  </header>
+  <dl
+    class="plan-card-fields"
+  >
+    <dt>
+      Destino
+    </dt>
+    <dd>
+      <ul
+        class="target"
+      >
+        <li>
+          <span
+            class="target-key"
+          >
+            exam
+            :
+          </span>
+           
+          1
+        </li>
+        <li>
+          <span
+            class="target-key"
+          >
+            text
+            :
+          </span>
+           
+          ┬┐Qu├® hace values_list()?
+        </li>
+      </ul>
+    </dd>
+    <dt>
+      Propone
+    </dt>
+    <dd>
+      agente
+    </dd>
+    <dt>
+      Hash
+    </dt>
+    <dd>
+      <code>
+        0f9e8d7c6b5a
+      </code>
+    </dd>
+  </dl>
+  <div
+    class="plan-card-actions"
+  >
+    <button
+      class="btn btn-primary"
+      type="button"
+    >
+      Aprobar
+    </button>
+    <button
+      class="btn btn-ghost"
+      type="button"
+    >
+      Rechazar
+    </button>
+  </div>
+</article> instead[39m
+   ├ù Inbox ┬À decidir (estado y funciones que suben) > rechazar un plan lo pone en Decididos como Rechazado 122ms
+     ÔåÆ [2mexpect([22m[31melement[39m[2m).not.toBeInTheDocument()[22m
+
+[31mexpected document not to contain element, found <article
+  aria-label="Plan T-04"
+  class="plan-card plan-card-r1"
+>
+  <header
+    class="plan-card-header"
+  >
+    <h4>
+      questions_create
+    </h4>
+    <span
+      class="badge"
+    >
+      R1 ┬À crea datos
+    </span>
+  </header>
+  <dl
+    class="plan-card-fields"
+  >
+    <dt>
+      Destino
+    </dt>
+    <dd>
+      <ul
+        class="target"
+      >
+        <li>
+          <span
+            class="target-key"
+          >
+            exam
+            :
+          </span>
+           
+          2
+        </li>
+        <li>
+          <span
+            class="target-key"
+          >
+            text
+            :
+          </span>
+           
+          ┬┐Para qu├® sirve csrf_token?
+        </li>
+      </ul>
+    </dd>
+    <dt>
+      Propone
+    </dt>
+    <dd>
+      agente
+    </dd>
+    <dt>
+      Hash
+    </dt>
+    <dd>
+      <code>
+        99aabbccddee
+      </code>
+    </dd>
+  </dl>
+  <div
+    class="plan-card-actions"
+  >
+    <button
+      class="btn btn-primary"
+      type="button"
+    >
+      Aprobar
+    </button>
+    <button
+      class="btn btn-ghost"
+      type="button"
+    >
+      Rechazar
+    </button>
+  </div>
+</article> instead[39m
+   ├ù Inbox ┬À decidir (estado y funciones que suben) > aprobar un plan R2 escribiendo su hash tambi├®n lo mueve a Decididos 390ms
+     ÔåÆ [2mexpect([22m[31melement[39m[2m).not.toBeInTheDocument()[22m
+
+[31mexpected document not to contain element, found <article
+  aria-label="Plan T-01"
+  class="plan-card plan-card-r2"
+>
+  <header
+    class="plan-card-header"
+  >
+    <h4>
+      exams_destroy
+    </h4>
+    <span
+      class="badge"
+    >
+      R2 ┬À destructivo
+    </span>
+  </header>
+  <dl
+    class="plan-card-fields"
+  >
+    <dt>
+      Destino
+    </dt>
+    <dd>
+      <ul
+        class="target"
+      >
+        <li>
+          <span
+            class="target-key"
+          >
+            id
+            :
+          </span>
+           
+          1
+        </li>
+        <li>
+          <span
+            class="target-key"
+          >
+            title
+            :
+          </span>
+           
+          Examen de ORM
+        </li>
+        <li>
+          <span
+            class="target-key"
+          >
+            question_count
+            :
+          </span>
+           
+          4
+        </li>
+      </ul>
+    </dd>
+    <dt>
+      Propone
+    </dt>
+    <dd>
+      agente
+    </dd>
+    <dt>
+      Hash
+    </dt>
+    <dd>
+      <code>
+        a1b2c3d4e5f6
+      </code>
+    </dd>
+  </dl>
+  <div
+    class="plan-card-actions"
+  >
+    <div
+      class="hash-confirm"
+    >
+      <label>
+        Hash del plan
+        <input
+          autocomplete="off"
+          spellcheck="false"
+          type="text"
+          value="a1b2c3d4e5f6"
+        />
+      </label>
+      <button
+        class="btn btn-danger"
+        type="button"
+      >
+        Aprobar
+      </button>
+    </div>
+    <button
+      class="btn btn-ghost"
+      type="button"
+    >
+      Rechazar
+    </button>
+  </div>
+</article> instead[39m
+   ├ù Inbox ┬À decidir (estado y funciones que suben) > decidir un plan no toca a los dem├ís 113ms
+     ÔåÆ expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-01', 'T-03', 'T-04' ]
+   ├ù Inbox ┬À decidir (estado y funciones que suben) > acumula las decisiones: la segunda no borra la primera 182ms
+     ÔåÆ Unable to find an accessible element with the role "listitem"
+
+Here are the accessible roles:
+
+  heading:
+
+  Name "Decididos":
+  [36m<h3[39m
+    [33mid[39m=[32m"decided-title"[39m
+  [36m/>[39m
+
+  --------------------------------------------------paragraph:
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"empty"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<section[39m
+  [33maria-labelledby[39m=[32m"decided-title"[39m
+[36m>[39m
+  [36m<h3[39m
+    [33mid[39m=[32m"decided-title"[39m
+  [36m>[39m
+    [0mDecididos[0m
+  [36m</h3>[39m
+  [36m<p[39m
+    [33mclass[39m=[32m"empty"[39m
+  [36m>[39m
+    [0mA├║n no has decidido ning├║n plan.[0m
+  [36m</p>[39m
+[36m</section>[39m
+   ├ù Inbox ┬À contadores calculados > los contadores siguen a las decisiones 120ms
+     ÔåÆ Unable to find an element with the text: Pendientes: 3. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-labelledby[39m=[32m"inbox-title"[39m
+      [33mclass[39m=[32m"inbox"[39m
+    [36m>[39m
+      [36m<h2[39m
+        [33mid[39m=[32m"inbox-title"[39m
+      [36m>[39m
+        [0mPlanes del agente[0m
+      [36m</h2>[39m
+      [36m<p[39m
+        [33mclass[39m=[32m"counters"[39m
+      [36m>[39m
+        [36m<span>[39m
+          [0mPendientes: [0m
+          [0m4[0m
+        [36m</span>[39m
+        [36m<span>[39m
+          [0mDecididos: [0m
+          [0m0[0m
+        [36m</span>[39m
+      [36m</p>[39m
+      [36m<label[39m
+        [33mclass[39m=[32m"search"[39m
+      [36m>[39m
+        [0mBuscar plan[0m
+        [36m<input[39m
+          [33mtype[39m=[32m"search"[39m
+          [33mvalue[39m=[32m""[39m
+        [36m/>[39m
+      [36m</label>[39m
+      [36m<section[39m
+        [33maria-labelledby[39m=[32m"pending-title"[39m
+      [36m>[39m
+        [36m<h3[39m
+          [33mid[39m=[32m"pending-title"[39m
+        [36m>[39m
+          [0mPendientes[0m
+        [36m</h3>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"plan-list"[39m
+        [36m>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-01"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r2"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mexams_destroy[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR2 ┬À destructivo[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mid[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m1[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtitle[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0mExamen de ORM[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mquestion_count[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m4[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0ma1b2c3d4e5f6[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"hash-confirm"[39m
+              [36m>[39m
+                [36m<label>[39m
+                  [0mHash del plan[0m
+                  [36m<input[39m
+                    [33mautocomplete[39m=[32m"off"[39m
+                    [33mspellcheck[39m=[32m"false"[39m
+                    [33mtype[39m=[32m"text"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                [36m</label>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn btn-danger"[39m
+                  [33mdisabled[39m=[32m""[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mAprobar[0m
+                [36m</button>[39m
+              [36m</div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-02"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r1"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_create[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR1 ┬À crea datos[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mexam[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m1[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Qu├® hace values_list()?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m0f9e8d7c6b5a[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mAprobar[0m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-03"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r2"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_destroy[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR2 ┬À destructivo[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mid[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m7[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Qu├® es el contexto de una plantilla?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m112233445566[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"hash-confirm"[39m
+              [36m>[39m
+                [36m<label>[39m
+                  [0mHash del plan[0m
+                  [36m<input[39m
+                    [33mautocomplete[39m=[32m"off"[39m
+                    [33mspellcheck[39m=[32m"false"[39m
+                    [33mtype[39m=[32m"text"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                [36m</label>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn btn-danger"[39m
+                  [33mdisabled[39m=[32m""[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mAprobar[0m
+                [36m</button>[39m
+              [36m</div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-04"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r1"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_create[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR1 ┬À crea datos[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mexam[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m2[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Para qu├® sirve csrf_token?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m99aabbccddee[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mAprobar[0m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+        [36m</div>[39m
+      [36m</section>[39m
+      [36m<section[39m
+        [33maria-labelledby[39m=[32m"decided-title"[39m
+      [36m>[39m
+        [36m<h3[39m
+          [33mid[39m=[32m"decided-title"[39m
+        [36m>[39m
+          [0mDecididos[0m
+        [36m</h3>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"empty"[39m
+        [36m>[39m
+          [0mA├║n no has decidido ning├║n plan.[0m
+        [36m</p>[39m
+      [36m</section>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+   ├ù Inbox ┬À contadores calculados > los contadores cuentan todos los pendientes, aunque la b├║squeda oculte algunos 272ms
+     ÔåÆ expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-01', 'T-03' ]
+   ├ù Inbox ┬À b├║squeda (entrada controlada) > filtra los pendientes por operaci├│n 184ms
+     ÔåÆ expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-01', 'T-03' ]
+   ├ù Inbox ┬À b├║squeda (entrada controlada) > filtra por el texto del destino sin distinguir may├║sculas 224ms
+     ÔåÆ expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-03' ]
+   ├ù Inbox ┬À b├║squeda (entrada controlada) > filtra por el t├¡tulo del destino 120ms
+     ÔåÆ expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-01' ]
+   ├ù Inbox ┬À b├║squeda (entrada controlada) > ignora los espacios al borde del texto 284ms
+     ÔåÆ expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-01', 'T-03' ]
+   ├ù Inbox ┬À b├║squeda (entrada controlada) > lo que se escribe aparece en el campo y, al borrarlo, vuelven todos los planes 210ms
+     ÔåÆ expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to have a length of 2 but got 4
+   ├ù Inbox ┬À b├║squeda (entrada controlada) > solo filtra los pendientes: los decididos se siguen viendo 239ms
+     ÔåÆ expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-04' ]
+   ├ù Inbox ┬À estados vac├¡os y bot├│n Limpiar b├║squeda > sin coincidencias dice ┬½No hay planes que coincidan┬╗ 129ms
+     ÔåÆ Unable to find an element with the text: No hay planes que coincidan. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-labelledby[39m=[32m"inbox-title"[39m
+      [33mclass[39m=[32m"inbox"[39m
+    [36m>[39m
+      [36m<h2[39m
+        [33mid[39m=[32m"inbox-title"[39m
+      [36m>[39m
+        [0mPlanes del agente[0m
+      [36m</h2>[39m
+      [36m<p[39m
+        [33mclass[39m=[32m"counters"[39m
+      [36m>[39m
+        [36m<span>[39m
+          [0mPendientes: [0m
+          [0m4[0m
+        [36m</span>[39m
+        [36m<span>[39m
+          [0mDecididos: [0m
+          [0m0[0m
+        [36m</span>[39m
+      [36m</p>[39m
+      [36m<label[39m
+        [33mclass[39m=[32m"search"[39m
+      [36m>[39m
+        [0mBuscar plan[0m
+        [36m<input[39m
+          [33mtype[39m=[32m"search"[39m
+          [33mvalue[39m=[32m"zzz"[39m
+        [36m/>[39m
+      [36m</label>[39m
+      [36m<section[39m
+        [33maria-labelledby[39m=[32m"pending-title"[39m
+      [36m>[39m
+        [36m<h3[39m
+          [33mid[39m=[32m"pending-title"[39m
+        [36m>[39m
+          [0mPendientes[0m
+        [36m</h3>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"plan-list"[39m
+        [36m>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-01"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r2"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mexams_destroy[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR2 ┬À destructivo[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mid[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m1[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtitle[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0mExamen de ORM[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mquestion_count[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m4[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0ma1b2c3d4e5f6[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"hash-confirm"[39m
+              [36m>[39m
+                [36m<label>[39m
+                  [0mHash del plan[0m
+                  [36m<input[39m
+                    [33mautocomplete[39m=[32m"off"[39m
+                    [33mspellcheck[39m=[32m"false"[39m
+                    [33mtype[39m=[32m"text"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                [36m</label>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn btn-danger"[39m
+                  [33mdisabled[39m=[32m""[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mAprobar[0m
+                [36m</button>[39m
+              [36m</div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-02"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r1"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_create[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR1 ┬À crea datos[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mexam[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m1[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Qu├® hace values_list()?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m0f9e8d7c6b5a[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mAprobar[0m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-03"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r2"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_destroy[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR2 ┬À destructivo[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mid[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m7[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Qu├® es el contexto de una plantilla?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m112233445566[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"hash-confirm"[39m
+              [36m>[39m
+                [36m<label>[39m
+                  [0mHash del plan[0m
+                  [36m<input[39m
+                    [33mautocomplete[39m=[32m"off"[39m
+                    [33mspellcheck[39m=[32m"false"[39m
+                    [33mtype[39m=[32m"text"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                [36m</label>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn btn-danger"[39m
+                  [33mdisabled[39m=[32m""[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mAprobar[0m
+                [36m</button>[39m
+              [36m</div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-04"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r1"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_create[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR1 ┬À crea datos[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mexam[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m2[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Para qu├® sirve csrf_token?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m99aabbccddee[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mAprobar[0m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+        [36m</div>[39m
+      [36m</section>[39m
+      [36m<section[39m
+        [33maria-labelledby[39m=[32m"decided-title"[39m
+      [36m>[39m
+        [36m<h3[39m
+          [33mid[39m=[32m"decided-title"[39m
+        [36m>[39m
+          [0mDecididos[0m
+        [36m</h3>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"empty"[39m
+        [36m>[39m
+          [0mA├║n no has decidido ning├║n plan.[0m
+        [36m</p>[39m
+      [36m</section>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+   ├ù Inbox ┬À estados vac├¡os y bot├│n Limpiar b├║squeda > Limpiar b├║squeda vac├¡a el campo y devuelve los planes 406ms
+     ÔåÆ Unable to find an accessible element with the role "button" and name "Limpiar b├║squeda"
+
+Here are the accessible roles:
+
+  region:
+
+  Name "Planes del agente":
+  [36m<section[39m
+    [33maria-labelledby[39m=[32m"inbox-title"[39m
+    [33mclass[39m=[32m"inbox"[39m
+  [36m/>[39m
+
+  Name "Pendientes":
+  [36m<section[39m
+    [33maria-labelledby[39m=[32m"pending-title"[39m
+  [36m/>[39m
+
+  Name "Decididos":
+  [36m<section[39m
+    [33maria-labelledby[39m=[32m"decided-title"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Planes del agente":
+  [36m<h2[39m
+    [33mid[39m=[32m"inbox-title"[39m
+  [36m/>[39m
+
+  Name "Pendientes":
+  [36m<h3[39m
+    [33mid[39m=[32m"pending-title"[39m
+  [36m/>[39m
+
+  Name "exams_destroy":
+  [36m<h4 />[39m
+
+  Name "questions_create":
+  [36m<h4 />[39m
+
+  Name "questions_destroy":
+  [36m<h4 />[39m
+
+  Name "questions_create":
+  [36m<h4 />[39m
+
+  Name "Decididos":
+  [36m<h3[39m
+    [33mid[39m=[32m"decided-title"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"counters"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"empty"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  searchbox:
+
+  Name "Buscar plan":
+  [36m<input[39m
+    [33mtype[39m=[32m"search"[39m
+    [33mvalue[39m=[32m"zzz"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  article:
+
+  Name "Plan T-01":
+  [36m<article[39m
+    [33maria-label[39m=[32m"Plan T-01"[39m
+    [33mclass[39m=[32m"plan-card plan-card-r2"[39m
+  [36m/>[39m
+
+  Name "Plan T-02":
+  [36m<article[39m
+    [33maria-label[39m=[32m"Plan T-02"[39m
+    [33mclass[39m=[32m"plan-card plan-card-r1"[39m
+  [36m/>[39m
+
+  Name "Plan T-03":
+  [36m<article[39m
+    [33maria-label[39m=[32m"Plan T-03"[39m
+    [33mclass[39m=[32m"plan-card plan-card-r2"[39m
+  [36m/>[39m
+
+  Name "Plan T-04":
+  [36m<article[39m
+    [33maria-label[39m=[32m"Plan T-04"[39m
+    [33mclass[39m=[32m"plan-card plan-card-r1"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  banner:
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"plan-card-header"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"plan-card-header"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"plan-card-header"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"plan-card-header"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  term:
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  --------------------------------------------------
+  definition:
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  --------------------------------------------------
+  list:
+
+  Name "":
+  [36m<ul[39m
+    [33mclass[39m=[32m"target"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<ul[39m
+    [33mclass[39m=[32m"target"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<ul[39m
+    [33mclass[39m=[32m"target"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<ul[39m
+    [33mclass[39m=[32m"target"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  listitem:
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  --------------------------------------------------
+  code:
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Hash del plan":
+  [36m<input[39m
+    [33mautocomplete[39m=[32m"off"[39m
+    [33mspellcheck[39m=[32m"false"[39m
+    [33mtype[39m=[32m"text"[39m
+    [33mvalue[39m=[32m""[39m
+  [36m/>[39m
+
+  Name "Hash del plan":
+  [36m<input[39m
+    [33mautocomplete[39m=[32m"off"[39m
+    [33mspellcheck[39m=[32m"false"[39m
+    [33mtype[39m=[32m"text"[39m
+    [33mvalue[39m=[32m""[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Aprobar":
+  [36m<button[39m
+    [33mclass[39m=[32m"btn btn-danger"[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Rechazar":
+  [36m<button[39m
+    [33mclass[39m=[32m"btn btn-ghost"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Aprobar":
+  [36m<button[39m
+    [33mclass[39m=[32m"btn btn-primary"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Rechazar":
+  [36m<button[39m
+    [33mclass[39m=[32m"btn btn-ghost"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Aprobar":
+  [36m<button[39m
+    [33mclass[39m=[32m"btn btn-danger"[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Rechazar":
+  [36m<button[39m
+    [33mclass[39m=[32m"btn btn-ghost"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Aprobar":
+  [36m<button[39m
+    [33mclass[39m=[32m"btn btn-primary"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Rechazar":
+  [36m<button[39m
+    [33mclass[39m=[32m"btn btn-ghost"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-labelledby[39m=[32m"inbox-title"[39m
+      [33mclass[39m=[32m"inbox"[39m
+    [36m>[39m
+      [36m<h2[39m
+        [33mid[39m=[32m"inbox-title"[39m
+      [36m>[39m
+        [0mPlanes del agente[0m
+      [36m</h2>[39m
+      [36m<p[39m
+        [33mclass[39m=[32m"counters"[39m
+      [36m>[39m
+        [36m<span>[39m
+          [0mPendientes: [0m
+          [0m4[0m
+        [36m</span>[39m
+        [36m<span>[39m
+          [0mDecididos: [0m
+          [0m0[0m
+        [36m</span>[39m
+      [36m</p>[39m
+      [36m<label[39m
+        [33mclass[39m=[32m"search"[39m
+      [36m>[39m
+        [0mBuscar plan[0m
+        [36m<input[39m
+          [33mtype[39m=[32m"search"[39m
+          [33mvalue[39m=[32m"zzz"[39m
+        [36m/>[39m
+      [36m</label>[39m
+      [36m<section[39m
+        [33maria-labelledby[39m=[32m"pending-title"[39m
+      [36m>[39m
+        [36m<h3[39m
+          [33mid[39m=[32m"pending-title"[39m
+        [36m>[39m
+          [0mPendientes[0m
+        [36m</h3>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"plan-list"[39m
+        [36m>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-01"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r2"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mexams_destroy[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR2 ┬À destructivo[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mid[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m1[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtitle[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0mExamen de ORM[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mquestion_count[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m4[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0ma1b2c3d4e5f6[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"hash-confirm"[39m
+              [36m>[39m
+                [36m<label>[39m
+                  [0mHash del plan[0m
+                  [36m<input[39m
+                    [33mautocomplete[39m=[32m"off"[39m
+                    [33mspellcheck[39m=[32m"false"[39m
+                    [33mtype[39m=[32m"text"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                [36m</label>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn btn-danger"[39m
+                  [33mdisabled[39m=[32m""[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mAprobar[0m
+                [36m</button>[39m
+              [36m</div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-02"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r1"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_create[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR1 ┬À crea datos[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mexam[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m1[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Qu├® hace values_list()?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m0f9e8d7c6b5a[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mAprobar[0m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-03"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r2"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_destroy[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR2 ┬À destructivo[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mid[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m7[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Qu├® es el contexto de una plantilla?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m112233445566[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"hash-confirm"[39m
+              [36m>[39m
+                [36m<label>[39m
+                  [0mHash del plan[0m
+                  [36m<input[39m
+                    [33mautocomplete[39m=[32m"off"[39m
+                    [33mspellcheck[39m=[32m"false"[39m
+                    [33mtype[39m=[32m"text"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                [36m</label>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn btn-danger"[39m
+                  [33mdisabled[39m=[32m""[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mAprobar[0m
+                [36m</button>[39m
+              [36m</div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-04"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r1"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_create[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR1 ┬À crea datos[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mexam[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m2[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Para qu├® sirve csrf_token?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m99aabbccddee[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mAprobar[0m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+        [36m</div>[39m
+      [36m</section>[39m
+      [36m<section[39m
+        [33maria-labelledby[39m=[32m"decided-title"[39m
+      [36m>[39m
+        [36m<h3[39m
+          [33mid[39m=[32m"decided-title"[39m
+        [36m>[39m
+          [0mDecididos[0m
+        [36m</h3>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"empty"[39m
+        [36m>[39m
+          [0mA├║n no has decidido ning├║n plan.[0m
+        [36m</p>[39m
+      [36m</section>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+   ├ù Inbox ┬À estados vac├¡os y bot├│n Limpiar b├║squeda > si todo est├í decidido y no hay b├║squeda, avisa de que no quedan pendientes 31ms
+     ÔåÆ Unable to find an element with the text: No quedan planes pendientes.. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-labelledby[39m=[32m"inbox-title"[39m
+      [33mclass[39m=[32m"inbox"[39m
+    [36m>[39m
+      [36m<h2[39m
+        [33mid[39m=[32m"inbox-title"[39m
+      [36m>[39m
+        [0mPlanes del agente[0m
+      [36m</h2>[39m
+      [36m<p[39m
+        [33mclass[39m=[32m"counters"[39m
+      [36m>[39m
+        [36m<span>[39m
+          [0mPendientes: [0m
+          [0m4[0m
+        [36m</span>[39m
+        [36m<span>[39m
+          [0mDecididos: [0m
+          [0m0[0m
+        [36m</span>[39m
+      [36m</p>[39m
+      [36m<label[39m
+        [33mclass[39m=[32m"search"[39m
+      [36m>[39m
+        [0mBuscar plan[0m
+        [36m<input[39m
+          [33mtype[39m=[32m"search"[39m
+          [33mvalue[39m=[32m""[39m
+        [36m/>[39m
+      [36m</label>[39m
+      [36m<section[39m
+        [33maria-labelledby[39m=[32m"pending-title"[39m
+      [36m>[39m
+        [36m<h3[39m
+          [33mid[39m=[32m"pending-title"[39m
+        [36m>[39m
+          [0mPendientes[0m
+        [36m</h3>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"plan-list"[39m
+        [36m>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-01"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r2"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mexams_destroy[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR2 ┬À destructivo[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mid[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m1[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtitle[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0mExamen de ORM[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mquestion_count[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m4[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0ma1b2c3d4e5f6[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"hash-confirm"[39m
+              [36m>[39m
+                [36m<label>[39m
+                  [0mHash del plan[0m
+                  [36m<input[39m
+                    [33mautocomplete[39m=[32m"off"[39m
+                    [33mspellcheck[39m=[32m"false"[39m
+                    [33mtype[39m=[32m"text"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                [36m</label>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn btn-danger"[39m
+                  [33mdisabled[39m=[32m""[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mAprobar[0m
+                [36m</button>[39m
+              [36m</div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-02"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r1"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_create[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR1 ┬À crea datos[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mexam[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m1[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Qu├® hace values_list()?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m0f9e8d7c6b5a[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mAprobar[0m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-03"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r2"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_destroy[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR2 ┬À destructivo[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mid[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m7[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Qu├® es el contexto de una plantilla?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m112233445566[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"hash-confirm"[39m
+              [36m>[39m
+                [36m<label>[39m
+                  [0mHash del plan[0m
+                  [36m<input[39m
+                    [33mautocomplete[39m=[32m"off"[39m
+                    [33mspellcheck[39m=[32m"false"[39m
+                    [33mtype[39m=[32m"text"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                [36m</label>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn btn-danger"[39m
+                  [33mdisabled[39m=[32m""[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mAprobar[0m
+                [36m</button>[39m
+              [36m</div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-04"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r1"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_create[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR1 ┬À crea datos[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mexam[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m2[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Para qu├® sirve csrf_token?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m99aabbccddee[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mAprobar[0m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+        [36m</div>[39m
+      [36m</section>[39m
+      [36m<section[39m
+        [33maria-labelledby[39m=[32m"decided-title"[39m
+      [36m>[39m
+        [36m<h3[39m
+          [33mid[39m=[32m"decided-title"[39m
+        [36m>[39m
+          [0mDecididos[0m
+        [36m</h3>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"empty"[39m
+        [36m>[39m
+          [0mA├║n no has decidido ning├║n plan.[0m
+        [36m</p>[39m
+      [36m</section>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+   ├ù Inbox ┬À persistencia en el navegador > guarda las decisiones en localStorage (clave dae-s10-decisions) 216ms
+     ÔåÆ expected null to deeply equal { 'T-02': 'approved', ÔÇª(1) }
+   ├ù Inbox ┬À persistencia en el navegador > al volver a montar la bandeja recupera lo decidido 131ms
+     ÔåÆ [2mexpect([22m[31melement[39m[2m).not.toBeInTheDocument()[22m
+
+[31mexpected document not to contain element, found <article
+  aria-label="Plan T-02"
+  class="plan-card plan-card-r1"
+>
+  <header
+    class="plan-card-header"
+  >
+    <h4>
+      questions_create
+    </h4>
+    <span
+      class="badge"
+    >
+      R1 ┬À crea datos
+    </span>
+  </header>
+  <dl
+    class="plan-card-fields"
+  >
+    <dt>
+      Destino
+    </dt>
+    <dd>
+      <ul
+        class="target"
+      >
+        <li>
+          <span
+            class="target-key"
+          >
+            exam
+            :
+          </span>
+           
+          1
+        </li>
+        <li>
+          <span
+            class="target-key"
+          >
+            text
+            :
+          </span>
+           
+          ┬┐Qu├® hace values_list()?
+        </li>
+      </ul>
+    </dd>
+    <dt>
+      Propone
+    </dt>
+    <dd>
+      agente
+    </dd>
+    <dt>
+      Hash
+    </dt>
+    <dd>
+      <code>
+        0f9e8d7c6b5a
+      </code>
+    </dd>
+  </dl>
+  <div
+    class="plan-card-actions"
+  >
+    <button
+      class="btn btn-primary"
+      type="button"
+    >
+      Aprobar
+    </button>
+    <button
+      class="btn btn-ghost"
+      type="button"
+    >
+      Rechazar
+    </button>
+  </div>
+</article> instead[39m
+   ├ù Inbox ┬À persistencia en el navegador > empieza desde lo guardado: listas y contadores coinciden 31ms
+     ÔåÆ expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-02', 'T-03' ]
+   ├ù Inbox ┬À persistencia en el navegador > ignora lo guardado de planes que ya no existen 29ms
+     ÔåÆ Unable to find an element with the text: Decididos: 1. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-labelledby[39m=[32m"inbox-title"[39m
+      [33mclass[39m=[32m"inbox"[39m
+    [36m>[39m
+      [36m<h2[39m
+        [33mid[39m=[32m"inbox-title"[39m
+      [36m>[39m
+        [0mPlanes del agente[0m
+      [36m</h2>[39m
+      [36m<p[39m
+        [33mclass[39m=[32m"counters"[39m
+      [36m>[39m
+        [36m<span>[39m
+          [0mPendientes: [0m
+          [0m4[0m
+        [36m</span>[39m
+        [36m<span>[39m
+          [0mDecididos: [0m
+          [0m0[0m
+        [36m</span>[39m
+      [36m</p>[39m
+      [36m<label[39m
+        [33mclass[39m=[32m"search"[39m
+      [36m>[39m
+        [0mBuscar plan[0m
+        [36m<input[39m
+          [33mtype[39m=[32m"search"[39m
+          [33mvalue[39m=[32m""[39m
+        [36m/>[39m
+      [36m</label>[39m
+      [36m<section[39m
+        [33maria-labelledby[39m=[32m"pending-title"[39m
+      [36m>[39m
+        [36m<h3[39m
+          [33mid[39m=[32m"pending-title"[39m
+        [36m>[39m
+          [0mPendientes[0m
+        [36m</h3>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"plan-list"[39m
+        [36m>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-01"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r2"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mexams_destroy[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR2 ┬À destructivo[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mid[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m1[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtitle[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0mExamen de ORM[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mquestion_count[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m4[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0ma1b2c3d4e5f6[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"hash-confirm"[39m
+              [36m>[39m
+                [36m<label>[39m
+                  [0mHash del plan[0m
+                  [36m<input[39m
+                    [33mautocomplete[39m=[32m"off"[39m
+                    [33mspellcheck[39m=[32m"false"[39m
+                    [33mtype[39m=[32m"text"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                [36m</label>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn btn-danger"[39m
+                  [33mdisabled[39m=[32m""[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mAprobar[0m
+                [36m</button>[39m
+              [36m</div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-02"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r1"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_create[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR1 ┬À crea datos[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mexam[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m1[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Qu├® hace values_list()?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m0f9e8d7c6b5a[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mAprobar[0m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-03"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r2"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_destroy[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR2 ┬À destructivo[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mid[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m7[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Qu├® es el contexto de una plantilla?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m112233445566[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"hash-confirm"[39m
+              [36m>[39m
+                [36m<label>[39m
+                  [0mHash del plan[0m
+                  [36m<input[39m
+                    [33mautocomplete[39m=[32m"off"[39m
+                    [33mspellcheck[39m=[32m"false"[39m
+                    [33mtype[39m=[32m"text"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                [36m</label>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn btn-danger"[39m
+                  [33mdisabled[39m=[32m""[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mAprobar[0m
+                [36m</button>[39m
+              [36m</div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+          [36m<article[39m
+            [33maria-label[39m=[32m"Plan T-04"[39m
+            [33mclass[39m=[32m"plan-card plan-card-r1"[39m
+          [36m>[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"plan-card-header"[39m
+            [36m>[39m
+              [36m<h4>[39m
+                [0mquestions_create[0m
+              [36m</h4>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"badge"[39m
+              [36m>[39m
+                [0mR1 ┬À crea datos[0m
+              [36m</span>[39m
+            [36m</header>[39m
+            [36m<dl[39m
+              [33mclass[39m=[32m"plan-card-fields"[39m
+            [36m>[39m
+              [36m<dt>[39m
+                [0mDestino[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<ul[39m
+                  [33mclass[39m=[32m"target"[39m
+                [36m>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mexam[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m2[0m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"target-key"[39m
+                    [36m>[39m
+                      [0mtext[0m
+                      [0m:[0m
+                    [36m</span>[39m
+                    [0m [0m
+                    [0m┬┐Para qu├® sirve csrf_token?[0m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mPropone[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [0magente[0m
+              [36m</dd>[39m
+              [36m<dt>[39m
+                [0mHash[0m
+              [36m</dt>[39m
+              [36m<dd>[39m
+                [36m<code>[39m
+                  [0m99aabbccddee[0m
+                [36m</code>[39m
+              [36m</dd>[39m
+            [36m</dl>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"plan-card-actions"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mAprobar[0m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-ghost"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mRechazar[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</article>[39m
+        [36m</div>[39m
+      [36m</section>[39m
+      [36m<section[39m
+        [33maria-labelledby[39m=[32m"decided-title"[39m
+      [36m>[39m
+        [36m<h3[39m
+          [33mid[39m=[32m"decided-title"[39m
+        [36m>[39m
+          [0mDecididos[0m
+        [36m</h3>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"empty"[39m
+        [36m>[39m
+          [0mA├║n no has decidido ning├║n plan.[0m
+        [36m</p>[39m
+      [36m</section>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+   Ô£ô Inbox ┬À no modifica lo que recibe > buscar y decidir no tocan el arreglo plans ni sus planes  355ms
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ» Failed Tests 20 ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À decidir (estado y funciones que suben) > aprobar un plan R1 lo saca de Pendientes y lo pone en Decididos como Aprobado
+Error: expect(element).not.toBeInTheDocument()
+
+expected document not to contain element, found <article
+  aria-label="Plan T-02"
+  class="plan-card plan-card-r1"
+>
+  <header
+    class="plan-card-header"
+  >
+    <h4>
+      questions_create
+    </h4>
+    <span
+      class="badge"
+    >
+      R1 ┬À crea datos
+    </span>
+  </header>
+  <dl
+    class="plan-card-fields"
+  >
+    <dt>
+      Destino
+    </dt>
+    <dd>
+      <ul
+        class="target"
+      >
+        <li>
+          <span
+            class="target-key"
+          >
+            exam
+            :
+          </span>
+           
+          1
+        </li>
+        <li>
+          <span
+            class="target-key"
+          >
+            text
+            :
+          </span>
+           
+          ┬┐Qu├® hace values_list()?
+        </li>
+      </ul>
+    </dd>
+    <dt>
+      Propone
+    </dt>
+    <dd>
+      agente
+    </dd>
+    <dt>
+      Hash
+    </dt>
+    <dd>
+      <code>
+        0f9e8d7c6b5a
+      </code>
+    </dd>
+  </dl>
+  <div
+    class="plan-card-actions"
+  >
+    <button
+      class="btn btn-primary"
+      type="button"
+    >
+      Aprobar
+    </button>
+    <button
+      class="btn btn-ghost"
+      type="button"
+    >
+      Rechazar
+    </button>
+  </div>
+</article> instead
+ ÔØ» src/test/Inbox.test.jsx:46:49
+     44|     await approve(user, "T-02");
+     45| 
+     46|     expect(cardIn(pendingRegion(), "T-02")).not.toBeInTheDocument();
+       |                                                 ^
+     47|     const item = within(decidedRegion()).getByRole("listitem");
+     48|     expect(item).toHaveTextContent("Aprobado");
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[1/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À decidir (estado y funciones que suben) > rechazar un plan lo pone en Decididos como Rechazado
+Error: expect(element).not.toBeInTheDocument()
+
+expected document not to contain element, found <article
+  aria-label="Plan T-04"
+  class="plan-card plan-card-r1"
+>
+  <header
+    class="plan-card-header"
+  >
+    <h4>
+      questions_create
+    </h4>
+    <span
+      class="badge"
+    >
+      R1 ┬À crea datos
+    </span>
+  </header>
+  <dl
+    class="plan-card-fields"
+  >
+    <dt>
+      Destino
+    </dt>
+    <dd>
+      <ul
+        class="target"
+      >
+        <li>
+          <span
+            class="target-key"
+          >
+            exam
+            :
+          </span>
+           
+          2
+        </li>
+        <li>
+          <span
+            class="target-key"
+          >
+            text
+            :
+          </span>
+           
+          ┬┐Para qu├® sirve csrf_token?
+        </li>
+      </ul>
+    </dd>
+    <dt>
+      Propone
+    </dt>
+    <dd>
+      agente
+    </dd>
+    <dt>
+      Hash
+    </dt>
+    <dd>
+      <code>
+        99aabbccddee
+      </code>
+    </dd>
+  </dl>
+  <div
+    class="plan-card-actions"
+  >
+    <button
+      class="btn btn-primary"
+      type="button"
+    >
+      Aprobar
+    </button>
+    <button
+      class="btn btn-ghost"
+      type="button"
+    >
+      Rechazar
+    </button>
+  </div>
+</article> instead
+ ÔØ» src/test/Inbox.test.jsx:57:49
+     55|     await reject(user, "T-04");
+     56| 
+     57|     expect(cardIn(pendingRegion(), "T-04")).not.toBeInTheDocument();
+       |                                                 ^
+     58|     expect(within(decidedRegion()).getByRole("listitem")).toHaveTextCoÔÇª
+     59|   });
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[2/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À decidir (estado y funciones que suben) > aprobar un plan R2 escribiendo su hash tambi├®n lo mueve a Decididos
+Error: expect(element).not.toBeInTheDocument()
+
+expected document not to contain element, found <article
+  aria-label="Plan T-01"
+  class="plan-card plan-card-r2"
+>
+  <header
+    class="plan-card-header"
+  >
+    <h4>
+      exams_destroy
+    </h4>
+    <span
+      class="badge"
+    >
+      R2 ┬À destructivo
+    </span>
+  </header>
+  <dl
+    class="plan-card-fields"
+  >
+    <dt>
+      Destino
+    </dt>
+    <dd>
+      <ul
+        class="target"
+      >
+        <li>
+          <span
+            class="target-key"
+          >
+            id
+            :
+          </span>
+           
+          1
+        </li>
+        <li>
+          <span
+            class="target-key"
+          >
+            title
+            :
+          </span>
+           
+          Examen de ORM
+        </li>
+        <li>
+          <span
+            class="target-key"
+          >
+            question_count
+            :
+          </span>
+           
+          4
+        </li>
+      </ul>
+    </dd>
+    <dt>
+      Propone
+    </dt>
+    <dd>
+      agente
+    </dd>
+    <dt>
+      Hash
+    </dt>
+    <dd>
+      <code>
+        a1b2c3d4e5f6
+      </code>
+    </dd>
+  </dl>
+  <div
+    class="plan-card-actions"
+  >
+    <div
+      class="hash-confirm"
+    >
+      <label>
+        Hash del plan
+        <input
+          autocomplete="off"
+          spellcheck="false"
+          type="text"
+          value="a1b2c3d4e5f6"
+        />
+      </label>
+      <button
+        class="btn btn-danger"
+        type="button"
+      >
+        Aprobar
+      </button>
+    </div>
+    <button
+      class="btn btn-ghost"
+      type="button"
+    >
+      Rechazar
+    </button>
+  </div>
+</article> instead
+ ÔØ» src/test/Inbox.test.jsx:66:49
+     64|     await approve(user, "T-01");
+     65| 
+     66|     expect(cardIn(pendingRegion(), "T-01")).not.toBeInTheDocument();
+       |                                                 ^
+     67|     const item = within(decidedRegion()).getByRole("listitem");
+     68|     expect(item).toHaveTextContent("Aprobado");
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[3/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À decidir (estado y funciones que suben) > decidir un plan no toca a los dem├ís
+AssertionError: expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-01', 'T-03', 'T-04' ]
+
+- Expected
++ Received
+
+  [
+    "T-01",
++   "T-02",
+    "T-03",
+    "T-04",
+  ]
+
+ ÔØ» src/test/Inbox.test.jsx:76:26
+     74|     render(<Inbox plans={makePlans()} />);
+     75|     await approve(user, "T-02");
+     76|     expect(pendingIds()).toEqual(["T-01", "T-03", "T-04"]);
+       |                          ^
+     77|   });
+     78| 
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[4/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À decidir (estado y funciones que suben) > acumula las decisiones: la segunda no borra la primera
+TestingLibraryElementError: Unable to find an accessible element with the role "listitem"
+
+Here are the accessible roles:
+
+  heading:
+
+  Name "Decididos":
+  <h3
+    id="decided-title"
+  />
+
+  --------------------------------------------------paragraph:
+
+  Name "":
+  <p
+    class="empty"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<section
+  aria-labelledby="decided-title"
+>
+  <h3
+    id="decided-title"
+  >
+    Decididos
+  </h3>
+  <p
+    class="empty"
+  >
+    A├║n no has decidido ning├║n plan.
+  </p>
+</section>
+ ÔØ» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:109:15
+ ÔØ» src/test/Inbox.test.jsx:84:36
+     82|     await approve(user, "T-02");
+     83|     await reject(user, "T-03");
+     84|     expect(within(decidedRegion()).getAllByRole("listitem")).toHaveLenÔÇª
+       |                                    ^
+     85|   });
+     86| });
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[5/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À contadores calculados > los contadores siguen a las decisiones
+TestingLibraryElementError: Unable to find an element with the text: Pendientes: 3. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <section
+      aria-labelledby="inbox-title"
+      class="inbox"
+    >
+      <h2
+        id="inbox-title"
+      >
+        Planes del agente
+      </h2>
+      <p
+        class="counters"
+      >
+        <span>
+          Pendientes: 
+          4
+        </span>
+        <span>
+          Decididos: 
+          0
+        </span>
+      </p>
+      <label
+        class="search"
+      >
+        Buscar plan
+        <input
+          type="search"
+          value=""
+        />
+      </label>
+      <section
+        aria-labelledby="pending-title"
+      >
+        <h3
+          id="pending-title"
+        >
+          Pendientes
+        </h3>
+        <div
+          class="plan-list"
+        >
+          <article
+            aria-label="Plan T-01"
+            class="plan-card plan-card-r2"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                exams_destroy
+              </h4>
+              <span
+                class="badge"
+              >
+                R2 ┬À destructivo
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      id
+                      :
+                    </span>
+                     
+                    1
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      title
+                      :
+                    </span>
+                     
+                    Examen de ORM
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      question_count
+                      :
+                    </span>
+                     
+                    4
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  a1b2c3d4e5f6
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <div
+                class="hash-confirm"
+              >
+                <label>
+                  Hash del plan
+                  <input
+                    autocomplete="off"
+                    spellcheck="false"
+                    type="text"
+                    value=""
+                  />
+                </label>
+                <button
+                  class="btn btn-danger"
+                  disabled=""
+                  type="button"
+                >
+                  Aprobar
+                </button>
+              </div>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-02"
+            class="plan-card plan-card-r1"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_create
+              </h4>
+              <span
+                class="badge"
+              >
+                R1 ┬À crea datos
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      exam
+                      :
+                    </span>
+                     
+                    1
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Qu├® hace values_list()?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  0f9e8d7c6b5a
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Aprobar
+              </button>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-03"
+            class="plan-card plan-card-r2"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_destroy
+              </h4>
+              <span
+                class="badge"
+              >
+                R2 ┬À destructivo
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      id
+                      :
+                    </span>
+                     
+                    7
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Qu├® es el contexto de una plantilla?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  112233445566
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <div
+                class="hash-confirm"
+              >
+                <label>
+                  Hash del plan
+                  <input
+                    autocomplete="off"
+                    spellcheck="false"
+                    type="text"
+                    value=""
+                  />
+                </label>
+                <button
+                  class="btn btn-danger"
+                  disabled=""
+                  type="button"
+                >
+                  Aprobar
+                </button>
+              </div>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-04"
+            class="plan-card plan-card-r1"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_create
+              </h4>
+              <span
+                class="badge"
+              >
+                R1 ┬À crea datos
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      exam
+                      :
+                    </span>
+                     
+                    2
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Para qu├® sirve csrf_token?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  99aabbccddee
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Aprobar
+              </button>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section
+        aria-labelledby="decided-title"
+      >
+        <h3
+          id="decided-title"
+        >
+          Decididos
+        </h3>
+        <p
+          class="empty"
+        >
+          A├║n no has decidido ning├║n plan.
+        </p>
+      </section>
+    </section>
+  </div>
+</body>
+ ÔØ» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ÔØ» src/test/Inbox.test.jsx:93:19
+     91|     render(<Inbox plans={makePlans()} />);
+     92|     await approve(user, "T-02");
+     93|     expect(screen.getByText("Pendientes: 3")).toBeInTheDocument();
+       |                   ^
+     94|     expect(screen.getByText("Decididos: 1")).toBeInTheDocument();
+     95| 
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[6/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À contadores calculados > los contadores cuentan todos los pendientes, aunque la b├║squeda oculte algunos
+AssertionError: expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-01', 'T-03' ]
+
+- Expected
++ Received
+
+  [
+    "T-01",
++   "T-02",
+    "T-03",
++   "T-04",
+  ]
+
+ ÔØ» src/test/Inbox.test.jsx:107:26
+    105|     await user.type(searchBox(), "destroy");
+    106| 
+    107|     expect(pendingIds()).toEqual(["T-01", "T-03"]);
+       |                          ^
+    108|     expect(screen.getByText("Pendientes: 3")).toBeInTheDocument();
+    109|     expect(screen.getByText("Decididos: 1")).toBeInTheDocument();
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[7/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À b├║squeda (entrada controlada) > filtra los pendientes por operaci├│n
+AssertionError: expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-01', 'T-03' ]
+
+- Expected
++ Received
+
+  [
+    "T-01",
++   "T-02",
+    "T-03",
++   "T-04",
+  ]
+
+ ÔØ» src/test/Inbox.test.jsx:118:26
+    116|     render(<Inbox plans={makePlans()} />);
+    117|     await user.type(searchBox(), "destroy");
+    118|     expect(pendingIds()).toEqual(["T-01", "T-03"]);
+       |                          ^
+    119|   });
+    120| 
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[8/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À b├║squeda (entrada controlada) > filtra por el texto del destino sin distinguir may├║sculas
+AssertionError: expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-03' ]
+
+- Expected
++ Received
+
+  [
++   "T-01",
++   "T-02",
+    "T-03",
++   "T-04",
+  ]
+
+ ÔØ» src/test/Inbox.test.jsx:125:26
+    123|     render(<Inbox plans={makePlans()} />);
+    124|     await user.type(searchBox(), "PLANTILLA");
+    125|     expect(pendingIds()).toEqual(["T-03"]);
+       |                          ^
+    126|   });
+    127| 
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[9/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À b├║squeda (entrada controlada) > filtra por el t├¡tulo del destino
+AssertionError: expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-01' ]
+
+- Expected
++ Received
+
+  [
+    "T-01",
++   "T-02",
++   "T-03",
++   "T-04",
+  ]
+
+ ÔØ» src/test/Inbox.test.jsx:132:26
+    130|     render(<Inbox plans={makePlans()} />);
+    131|     await user.type(searchBox(), "orm");
+    132|     expect(pendingIds()).toEqual(["T-01"]);
+       |                          ^
+    133|   });
+    134| 
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[10/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À b├║squeda (entrada controlada) > ignora los espacios al borde del texto
+AssertionError: expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-01', 'T-03' ]
+
+- Expected
++ Received
+
+  [
+    "T-01",
++   "T-02",
+    "T-03",
++   "T-04",
+  ]
+
+ ÔØ» src/test/Inbox.test.jsx:139:26
+    137|     render(<Inbox plans={makePlans()} />);
+    138|     await user.type(searchBox(), "  destroy ");
+    139|     expect(pendingIds()).toEqual(["T-01", "T-03"]);
+       |                          ^
+    140|   });
+    141| 
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[11/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À b├║squeda (entrada controlada) > lo que se escribe aparece en el campo y, al borrarlo, vuelven todos los planes
+AssertionError: expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to have a length of 2 but got 4
+
+- Expected
++ Received
+
+- 2
++ 4
+
+ ÔØ» src/test/Inbox.test.jsx:147:26
+    145|     await user.type(searchBox(), "destroy");
+    146|     expect(searchBox()).toHaveValue("destroy");
+    147|     expect(pendingIds()).toHaveLength(2);
+       |                          ^
+    148| 
+    149|     await user.clear(searchBox());
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[12/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À b├║squeda (entrada controlada) > solo filtra los pendientes: los decididos se siguen viendo
+AssertionError: expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-04' ]
+
+- Expected
++ Received
+
+  [
++   "T-01",
++   "T-02",
++   "T-03",
+    "T-04",
+  ]
+
+ ÔØ» src/test/Inbox.test.jsx:159:26
+    157|     await user.type(searchBox(), "csrf");
+    158| 
+    159|     expect(pendingIds()).toEqual(["T-04"]);
+       |                          ^
+    160|     expect(within(decidedRegion()).getAllByRole("listitem")).toHaveLenÔÇª
+    161|   });
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[13/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À estados vac├¡os y bot├│n Limpiar b├║squeda > sin coincidencias dice ┬½No hay planes que coincidan┬╗
+TestingLibraryElementError: Unable to find an element with the text: No hay planes que coincidan. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <section
+      aria-labelledby="inbox-title"
+      class="inbox"
+    >
+      <h2
+        id="inbox-title"
+      >
+        Planes del agente
+      </h2>
+      <p
+        class="counters"
+      >
+        <span>
+          Pendientes: 
+          4
+        </span>
+        <span>
+          Decididos: 
+          0
+        </span>
+      </p>
+      <label
+        class="search"
+      >
+        Buscar plan
+        <input
+          type="search"
+          value="zzz"
+        />
+      </label>
+      <section
+        aria-labelledby="pending-title"
+      >
+        <h3
+          id="pending-title"
+        >
+          Pendientes
+        </h3>
+        <div
+          class="plan-list"
+        >
+          <article
+            aria-label="Plan T-01"
+            class="plan-card plan-card-r2"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                exams_destroy
+              </h4>
+              <span
+                class="badge"
+              >
+                R2 ┬À destructivo
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      id
+                      :
+                    </span>
+                     
+                    1
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      title
+                      :
+                    </span>
+                     
+                    Examen de ORM
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      question_count
+                      :
+                    </span>
+                     
+                    4
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  a1b2c3d4e5f6
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <div
+                class="hash-confirm"
+              >
+                <label>
+                  Hash del plan
+                  <input
+                    autocomplete="off"
+                    spellcheck="false"
+                    type="text"
+                    value=""
+                  />
+                </label>
+                <button
+                  class="btn btn-danger"
+                  disabled=""
+                  type="button"
+                >
+                  Aprobar
+                </button>
+              </div>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-02"
+            class="plan-card plan-card-r1"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_create
+              </h4>
+              <span
+                class="badge"
+              >
+                R1 ┬À crea datos
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      exam
+                      :
+                    </span>
+                     
+                    1
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Qu├® hace values_list()?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  0f9e8d7c6b5a
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Aprobar
+              </button>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-03"
+            class="plan-card plan-card-r2"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_destroy
+              </h4>
+              <span
+                class="badge"
+              >
+                R2 ┬À destructivo
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      id
+                      :
+                    </span>
+                     
+                    7
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Qu├® es el contexto de una plantilla?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  112233445566
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <div
+                class="hash-confirm"
+              >
+                <label>
+                  Hash del plan
+                  <input
+                    autocomplete="off"
+                    spellcheck="false"
+                    type="text"
+                    value=""
+                  />
+                </label>
+                <button
+                  class="btn btn-danger"
+                  disabled=""
+                  type="button"
+                >
+                  Aprobar
+                </button>
+              </div>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-04"
+            class="plan-card plan-card-r1"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_create
+              </h4>
+              <span
+                class="badge"
+              >
+                R1 ┬À crea datos
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      exam
+                      :
+                    </span>
+                     
+                    2
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Para qu├® sirve csrf_token?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  99aabbccddee
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Aprobar
+              </button>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section
+        aria-labelledby="decided-title"
+      >
+        <h3
+          id="decided-title"
+        >
+          Decididos
+        </h3>
+        <p
+          class="empty"
+        >
+          A├║n no has decidido ning├║n plan.
+        </p>
+      </section>
+    </section>
+  </div>
+</body>
+ ÔØ» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ÔØ» src/test/Inbox.test.jsx:170:19
+    168|     await user.type(searchBox(), "zzz");
+    169| 
+    170|     expect(screen.getByText("No hay planes que coincidan")).toBeInTheDÔÇª
+       |                   ^
+    171|     expect(pendingIds()).toEqual([]);
+    172|   });
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[14/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À estados vac├¡os y bot├│n Limpiar b├║squeda > Limpiar b├║squeda vac├¡a el campo y devuelve los planes
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Limpiar b├║squeda"
+
+Here are the accessible roles:
+
+  region:
+
+  Name "Planes del agente":
+  <section
+    aria-labelledby="inbox-title"
+    class="inbox"
+  />
+
+  Name "Pendientes":
+  <section
+    aria-labelledby="pending-title"
+  />
+
+  Name "Decididos":
+  <section
+    aria-labelledby="decided-title"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "Planes del agente":
+  <h2
+    id="inbox-title"
+  />
+
+  Name "Pendientes":
+  <h3
+    id="pending-title"
+  />
+
+  Name "exams_destroy":
+  <h4 />
+
+  Name "questions_create":
+  <h4 />
+
+  Name "questions_destroy":
+  <h4 />
+
+  Name "questions_create":
+  <h4 />
+
+  Name "Decididos":
+  <h3
+    id="decided-title"
+  />
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  <p
+    class="counters"
+  />
+
+  Name "":
+  <p
+    class="empty"
+  />
+
+  --------------------------------------------------
+  searchbox:
+
+  Name "Buscar plan":
+  <input
+    type="search"
+    value="zzz"
+  />
+
+  --------------------------------------------------
+  article:
+
+  Name "Plan T-01":
+  <article
+    aria-label="Plan T-01"
+    class="plan-card plan-card-r2"
+  />
+
+  Name "Plan T-02":
+  <article
+    aria-label="Plan T-02"
+    class="plan-card plan-card-r1"
+  />
+
+  Name "Plan T-03":
+  <article
+    aria-label="Plan T-03"
+    class="plan-card plan-card-r2"
+  />
+
+  Name "Plan T-04":
+  <article
+    aria-label="Plan T-04"
+    class="plan-card plan-card-r1"
+  />
+
+  --------------------------------------------------
+  banner:
+
+  Name "":
+  <header
+    class="plan-card-header"
+  />
+
+  Name "":
+  <header
+    class="plan-card-header"
+  />
+
+  Name "":
+  <header
+    class="plan-card-header"
+  />
+
+  Name "":
+  <header
+    class="plan-card-header"
+  />
+
+  --------------------------------------------------
+  term:
+
+  Name "":
+  <dt />
+
+  Name "":
+  <dt />
+
+  Name "":
+  <dt />
+
+  Name "":
+  <dt />
+
+  Name "":
+  <dt />
+
+  Name "":
+  <dt />
+
+  Name "":
+  <dt />
+
+  Name "":
+  <dt />
+
+  Name "":
+  <dt />
+
+  Name "":
+  <dt />
+
+  Name "":
+  <dt />
+
+  Name "":
+  <dt />
+
+  --------------------------------------------------
+  definition:
+
+  Name "":
+  <dd />
+
+  Name "":
+  <dd />
+
+  Name "":
+  <dd />
+
+  Name "":
+  <dd />
+
+  Name "":
+  <dd />
+
+  Name "":
+  <dd />
+
+  Name "":
+  <dd />
+
+  Name "":
+  <dd />
+
+  Name "":
+  <dd />
+
+  Name "":
+  <dd />
+
+  Name "":
+  <dd />
+
+  Name "":
+  <dd />
+
+  --------------------------------------------------
+  list:
+
+  Name "":
+  <ul
+    class="target"
+  />
+
+  Name "":
+  <ul
+    class="target"
+  />
+
+  Name "":
+  <ul
+    class="target"
+  />
+
+  Name "":
+  <ul
+    class="target"
+  />
+
+  --------------------------------------------------
+  listitem:
+
+  Name "":
+  <li />
+
+  Name "":
+  <li />
+
+  Name "":
+  <li />
+
+  Name "":
+  <li />
+
+  Name "":
+  <li />
+
+  Name "":
+  <li />
+
+  Name "":
+  <li />
+
+  Name "":
+  <li />
+
+  Name "":
+  <li />
+
+  --------------------------------------------------
+  code:
+
+  Name "":
+  <code />
+
+  Name "":
+  <code />
+
+  Name "":
+  <code />
+
+  Name "":
+  <code />
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Hash del plan":
+  <input
+    autocomplete="off"
+    spellcheck="false"
+    type="text"
+    value=""
+  />
+
+  Name "Hash del plan":
+  <input
+    autocomplete="off"
+    spellcheck="false"
+    type="text"
+    value=""
+  />
+
+  --------------------------------------------------
+  button:
+
+  Name "Aprobar":
+  <button
+    class="btn btn-danger"
+    disabled=""
+    type="button"
+  />
+
+  Name "Rechazar":
+  <button
+    class="btn btn-ghost"
+    type="button"
+  />
+
+  Name "Aprobar":
+  <button
+    class="btn btn-primary"
+    type="button"
+  />
+
+  Name "Rechazar":
+  <button
+    class="btn btn-ghost"
+    type="button"
+  />
+
+  Name "Aprobar":
+  <button
+    class="btn btn-danger"
+    disabled=""
+    type="button"
+  />
+
+  Name "Rechazar":
+  <button
+    class="btn btn-ghost"
+    type="button"
+  />
+
+  Name "Aprobar":
+  <button
+    class="btn btn-primary"
+    type="button"
+  />
+
+  Name "Rechazar":
+  <button
+    class="btn btn-ghost"
+    type="button"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <section
+      aria-labelledby="inbox-title"
+      class="inbox"
+    >
+      <h2
+        id="inbox-title"
+      >
+        Planes del agente
+      </h2>
+      <p
+        class="counters"
+      >
+        <span>
+          Pendientes: 
+          4
+        </span>
+        <span>
+          Decididos: 
+          0
+        </span>
+      </p>
+      <label
+        class="search"
+      >
+        Buscar plan
+        <input
+          type="search"
+          value="zzz"
+        />
+      </label>
+      <section
+        aria-labelledby="pending-title"
+      >
+        <h3
+          id="pending-title"
+        >
+          Pendientes
+        </h3>
+        <div
+          class="plan-list"
+        >
+          <article
+            aria-label="Plan T-01"
+            class="plan-card plan-card-r2"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                exams_destroy
+              </h4>
+              <span
+                class="badge"
+              >
+                R2 ┬À destructivo
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      id
+                      :
+                    </span>
+                     
+                    1
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      title
+                      :
+                    </span>
+                     
+                    Examen de ORM
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      question_count
+                      :
+                    </span>
+                     
+                    4
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  a1b2c3d4e5f6
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <div
+                class="hash-confirm"
+              >
+                <label>
+                  Hash del plan
+                  <input
+                    autocomplete="off"
+                    spellcheck="false"
+                    type="text"
+                    value=""
+                  />
+                </label>
+                <button
+                  class="btn btn-danger"
+                  disabled=""
+                  type="button"
+                >
+                  Aprobar
+                </button>
+              </div>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-02"
+            class="plan-card plan-card-r1"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_create
+              </h4>
+              <span
+                class="badge"
+              >
+                R1 ┬À crea datos
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      exam
+                      :
+                    </span>
+                     
+                    1
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Qu├® hace values_list()?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  0f9e8d7c6b5a
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Aprobar
+              </button>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-03"
+            class="plan-card plan-card-r2"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_destroy
+              </h4>
+              <span
+                class="badge"
+              >
+                R2 ┬À destructivo
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      id
+                      :
+                    </span>
+                     
+                    7
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Qu├® es el contexto de una plantilla?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  112233445566
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <div
+                class="hash-confirm"
+              >
+                <label>
+                  Hash del plan
+                  <input
+                    autocomplete="off"
+                    spellcheck="false"
+                    type="text"
+                    value=""
+                  />
+                </label>
+                <button
+                  class="btn btn-danger"
+                  disabled=""
+                  type="button"
+                >
+                  Aprobar
+                </button>
+              </div>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-04"
+            class="plan-card plan-card-r1"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_create
+              </h4>
+              <span
+                class="badge"
+              >
+                R1 ┬À crea datos
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      exam
+                      :
+                    </span>
+                     
+                    2
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Para qu├® sirve csrf_token?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  99aabbccddee
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Aprobar
+              </button>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section
+        aria-labelledby="decided-title"
+      >
+        <h3
+          id="decided-title"
+        >
+          Decididos
+        </h3>
+        <p
+          class="empty"
+        >
+          A├║n no has decidido ning├║n plan.
+        </p>
+      </section>
+    </section>
+  </div>
+</body>
+ ÔØ» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ÔØ» src/test/Inbox.test.jsx:178:29
+    176|     render(<Inbox plans={makePlans()} />);
+    177|     await user.type(searchBox(), "zzz");
+    178|     await user.click(screen.getByRole("button", { name: "Limpiar b├║squÔÇª
+       |                             ^
+    179| 
+    180|     expect(searchBox()).toHaveValue("");
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[15/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À estados vac├¡os y bot├│n Limpiar b├║squeda > si todo est├í decidido y no hay b├║squeda, avisa de que no quedan pendientes
+TestingLibraryElementError: Unable to find an element with the text: No quedan planes pendientes.. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <section
+      aria-labelledby="inbox-title"
+      class="inbox"
+    >
+      <h2
+        id="inbox-title"
+      >
+        Planes del agente
+      </h2>
+      <p
+        class="counters"
+      >
+        <span>
+          Pendientes: 
+          4
+        </span>
+        <span>
+          Decididos: 
+          0
+        </span>
+      </p>
+      <label
+        class="search"
+      >
+        Buscar plan
+        <input
+          type="search"
+          value=""
+        />
+      </label>
+      <section
+        aria-labelledby="pending-title"
+      >
+        <h3
+          id="pending-title"
+        >
+          Pendientes
+        </h3>
+        <div
+          class="plan-list"
+        >
+          <article
+            aria-label="Plan T-01"
+            class="plan-card plan-card-r2"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                exams_destroy
+              </h4>
+              <span
+                class="badge"
+              >
+                R2 ┬À destructivo
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      id
+                      :
+                    </span>
+                     
+                    1
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      title
+                      :
+                    </span>
+                     
+                    Examen de ORM
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      question_count
+                      :
+                    </span>
+                     
+                    4
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  a1b2c3d4e5f6
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <div
+                class="hash-confirm"
+              >
+                <label>
+                  Hash del plan
+                  <input
+                    autocomplete="off"
+                    spellcheck="false"
+                    type="text"
+                    value=""
+                  />
+                </label>
+                <button
+                  class="btn btn-danger"
+                  disabled=""
+                  type="button"
+                >
+                  Aprobar
+                </button>
+              </div>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-02"
+            class="plan-card plan-card-r1"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_create
+              </h4>
+              <span
+                class="badge"
+              >
+                R1 ┬À crea datos
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      exam
+                      :
+                    </span>
+                     
+                    1
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Qu├® hace values_list()?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  0f9e8d7c6b5a
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Aprobar
+              </button>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-03"
+            class="plan-card plan-card-r2"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_destroy
+              </h4>
+              <span
+                class="badge"
+              >
+                R2 ┬À destructivo
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      id
+                      :
+                    </span>
+                     
+                    7
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Qu├® es el contexto de una plantilla?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  112233445566
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <div
+                class="hash-confirm"
+              >
+                <label>
+                  Hash del plan
+                  <input
+                    autocomplete="off"
+                    spellcheck="false"
+                    type="text"
+                    value=""
+                  />
+                </label>
+                <button
+                  class="btn btn-danger"
+                  disabled=""
+                  type="button"
+                >
+                  Aprobar
+                </button>
+              </div>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-04"
+            class="plan-card plan-card-r1"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_create
+              </h4>
+              <span
+                class="badge"
+              >
+                R1 ┬À crea datos
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      exam
+                      :
+                    </span>
+                     
+                    2
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Para qu├® sirve csrf_token?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  99aabbccddee
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Aprobar
+              </button>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section
+        aria-labelledby="decided-title"
+      >
+        <h3
+          id="decided-title"
+        >
+          Decididos
+        </h3>
+        <p
+          class="empty"
+        >
+          A├║n no has decidido ning├║n plan.
+        </p>
+      </section>
+    </section>
+  </div>
+</body>
+ ÔØ» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ÔØ» src/test/Inbox.test.jsx:190:19
+    188|     render(<Inbox plans={makePlans()} />);
+    189| 
+    190|     expect(screen.getByText("No quedan planes pendientes.")).toBeInTheÔÇª
+       |                   ^
+    191|     expect(screen.getByText("Pendientes: 0")).toBeInTheDocument();
+    192|     expect(screen.getByText("Decididos: 4")).toBeInTheDocument();
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[16/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À persistencia en el navegador > guarda las decisiones en localStorage (clave dae-s10-decisions)
+AssertionError: expected null to deeply equal { 'T-02': 'approved', ÔÇª(1) }
+
+- Expected: 
+{
+  "T-02": "approved",
+  "T-04": "rejected",
+}
+
++ Received: 
+null
+
+ ÔØ» src/test/Inbox.test.jsx:203:66
+    201|     await reject(user, "T-04");
+    202| 
+    203|     expect(JSON.parse(window.localStorage.getItem(STORAGE_KEY))).toEquÔÇª
+       |                                                                  ^
+    204|       "T-02": "approved",
+    205|       "T-04": "rejected",
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[17/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À persistencia en el navegador > al volver a montar la bandeja recupera lo decidido
+Error: expect(element).not.toBeInTheDocument()
+
+expected document not to contain element, found <article
+  aria-label="Plan T-02"
+  class="plan-card plan-card-r1"
+>
+  <header
+    class="plan-card-header"
+  >
+    <h4>
+      questions_create
+    </h4>
+    <span
+      class="badge"
+    >
+      R1 ┬À crea datos
+    </span>
+  </header>
+  <dl
+    class="plan-card-fields"
+  >
+    <dt>
+      Destino
+    </dt>
+    <dd>
+      <ul
+        class="target"
+      >
+        <li>
+          <span
+            class="target-key"
+          >
+            exam
+            :
+          </span>
+           
+          1
+        </li>
+        <li>
+          <span
+            class="target-key"
+          >
+            text
+            :
+          </span>
+           
+          ┬┐Qu├® hace values_list()?
+        </li>
+      </ul>
+    </dd>
+    <dt>
+      Propone
+    </dt>
+    <dd>
+      agente
+    </dd>
+    <dt>
+      Hash
+    </dt>
+    <dd>
+      <code>
+        0f9e8d7c6b5a
+      </code>
+    </dd>
+  </dl>
+  <div
+    class="plan-card-actions"
+  >
+    <button
+      class="btn btn-primary"
+      type="button"
+    >
+      Aprobar
+    </button>
+    <button
+      class="btn btn-ghost"
+      type="button"
+    >
+      Rechazar
+    </button>
+  </div>
+</article> instead
+ ÔØ» src/test/Inbox.test.jsx:216:49
+    214| 
+    215|     render(<Inbox plans={makePlans()} />);
+    216|     expect(cardIn(pendingRegion(), "T-02")).not.toBeInTheDocument();
+       |                                                 ^
+    217|     expect(within(decidedRegion()).getByRole("listitem")).toHaveTextCoÔÇª
+    218|   });
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[18/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À persistencia en el navegador > empieza desde lo guardado: listas y contadores coinciden
+AssertionError: expected [ 'T-01', 'T-02', 'T-03', 'T-04' ] to deeply equal [ 'T-02', 'T-03' ]
+
+- Expected
++ Received
+
+  [
++   "T-01",
+    "T-02",
+    "T-03",
++   "T-04",
+  ]
+
+ ÔØ» src/test/Inbox.test.jsx:224:26
+    222|     render(<Inbox plans={makePlans()} />);
+    223| 
+    224|     expect(pendingIds()).toEqual(["T-02", "T-03"]);
+       |                          ^
+    225|     expect(within(decidedRegion()).getAllByRole("listitem")).toHaveLenÔÇª
+    226|     expect(screen.getByText("Pendientes: 2")).toBeInTheDocument();
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[19/20]ÔÄ»
+
+ FAIL  src/test/Inbox.test.jsx > Inbox ┬À persistencia en el navegador > ignora lo guardado de planes que ya no existen
+TestingLibraryElementError: Unable to find an element with the text: Decididos: 1. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <section
+      aria-labelledby="inbox-title"
+      class="inbox"
+    >
+      <h2
+        id="inbox-title"
+      >
+        Planes del agente
+      </h2>
+      <p
+        class="counters"
+      >
+        <span>
+          Pendientes: 
+          4
+        </span>
+        <span>
+          Decididos: 
+          0
+        </span>
+      </p>
+      <label
+        class="search"
+      >
+        Buscar plan
+        <input
+          type="search"
+          value=""
+        />
+      </label>
+      <section
+        aria-labelledby="pending-title"
+      >
+        <h3
+          id="pending-title"
+        >
+          Pendientes
+        </h3>
+        <div
+          class="plan-list"
+        >
+          <article
+            aria-label="Plan T-01"
+            class="plan-card plan-card-r2"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                exams_destroy
+              </h4>
+              <span
+                class="badge"
+              >
+                R2 ┬À destructivo
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      id
+                      :
+                    </span>
+                     
+                    1
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      title
+                      :
+                    </span>
+                     
+                    Examen de ORM
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      question_count
+                      :
+                    </span>
+                     
+                    4
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  a1b2c3d4e5f6
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <div
+                class="hash-confirm"
+              >
+                <label>
+                  Hash del plan
+                  <input
+                    autocomplete="off"
+                    spellcheck="false"
+                    type="text"
+                    value=""
+                  />
+                </label>
+                <button
+                  class="btn btn-danger"
+                  disabled=""
+                  type="button"
+                >
+                  Aprobar
+                </button>
+              </div>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-02"
+            class="plan-card plan-card-r1"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_create
+              </h4>
+              <span
+                class="badge"
+              >
+                R1 ┬À crea datos
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      exam
+                      :
+                    </span>
+                     
+                    1
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Qu├® hace values_list()?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  0f9e8d7c6b5a
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Aprobar
+              </button>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-03"
+            class="plan-card plan-card-r2"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_destroy
+              </h4>
+              <span
+                class="badge"
+              >
+                R2 ┬À destructivo
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      id
+                      :
+                    </span>
+                     
+                    7
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Qu├® es el contexto de una plantilla?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+
+                  112233445566
+ Test Files  1 failed (1)
+                </code>
+      Tests  20 failed | 2 passed (22)
+              </dd>
+   Start at  01:15:30
+            </dl>
+   Duration  8.46s (transform 182ms, setup 419ms, collect 776ms, tests 4.22s, environment 1.96s, prepare 325ms)
+
+JSON report written to C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10/docs/evidencias/06-inbox-estado.json
+            <div
+              class="plan-card-actions"
+            >
+              <div
+                class="hash-confirm"
+              >
+                <label>
+                  Hash del plan
+                  <input
+                    autocomplete="off"
+                    spellcheck="false"
+                    type="text"
+                    value=""
+                  />
+                </label>
+                <button
+                  class="btn btn-danger"
+                  disabled=""
+                  type="button"
+                >
+                  Aprobar
+                </button>
+              </div>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+          <article
+            aria-label="Plan T-04"
+            class="plan-card plan-card-r1"
+          >
+            <header
+              class="plan-card-header"
+            >
+              <h4>
+                questions_create
+              </h4>
+              <span
+                class="badge"
+              >
+                R1 ┬À crea datos
+              </span>
+            </header>
+            <dl
+              class="plan-card-fields"
+            >
+              <dt>
+                Destino
+              </dt>
+              <dd>
+                <ul
+                  class="target"
+                >
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      exam
+                      :
+                    </span>
+                     
+                    2
+                  </li>
+                  <li>
+                    <span
+                      class="target-key"
+                    >
+                      text
+                      :
+                    </span>
+                     
+                    ┬┐Para qu├® sirve csrf_token?
+                  </li>
+                </ul>
+              </dd>
+              <dt>
+                Propone
+              </dt>
+              <dd>
+                agente
+              </dd>
+              <dt>
+                Hash
+              </dt>
+              <dd>
+                <code>
+                  99aabbccddee
+                </code>
+              </dd>
+            </dl>
+            <div
+              class="plan-card-actions"
+            >
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Aprobar
+              </button>
+              <button
+                class="btn btn-ghost"
+                type="button"
+              >
+                Rechazar
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section
+        aria-labelledby="decided-title"
+      >
+        <h3
+          id="decided-title"
+        >
+          Decididos
+        </h3>
+        <p
+          class="empty"
+        >
+          A├║n no has decidido ning├║n plan.
+        </p>
+      </section>
+    </section>
+  </div>
+</body>
+ ÔØ» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ÔØ» src/test/Inbox.test.jsx:234:19
+    232|     render(<Inbox plans={makePlans()} />);
+    233| 
+    234|     expect(screen.getByText("Decididos: 1")).toBeInTheDocument();
+       |                   ^
+    235|     expect(screen.getByText("Pendientes: 3")).toBeInTheDocument();
+    236|   });
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[20/20]ÔÄ»
+

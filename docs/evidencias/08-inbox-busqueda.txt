@@ -1,0 +1,16 @@
+
+> dae-s10-bandeja-aprobaciones@0.1.0 test
+> vitest run --mode team Inbox -t b├║squeda|vac├¡os --reporter=default --reporter=json --outputFile=docs/evidencias/08-inbox-busqueda.json --no-color
+
+
+ RUN  v3.2.7 C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10
+
+ Ô£ô src/test/Inbox.test.jsx (22 tests | 12 skipped) 2207ms
+   Ô£ô Inbox ┬À contadores calculados > los contadores cuentan todos los pendientes, aunque la b├║squeda oculte algunos  524ms
+
+ Test Files  1 passed (1)
+      Tests  10 passed | 12 skipped (22)
+   Start at  01:16:26
+   Duration  6.40s (transform 185ms, setup 433ms, collect 763ms, tests 2.21s, environment 1.96s, prepare 348ms)
+
+JSON report written to C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10/docs/evidencias/08-inbox-busqueda.json
