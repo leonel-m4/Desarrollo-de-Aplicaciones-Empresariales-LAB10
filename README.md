@@ -13,13 +13,13 @@ La guía del laboratorio (con su rúbrica) está en el campus virtual; aquí est
 
 ## Estado de la entrega
 
-Los componentes del equipo y los cuatro fallos de `src/ai/` están resueltos.
+La implementación principal y los cuatro fallos de `src/ai/` están resueltos.
 Ambos modos de pruebas pasan **61/61** y `npm run build` compila correctamente.
 El [entregable de los 16 pasos](ENTREGABLE.md) incluye la comparación con la S08,
 la tabla de uso de IA, los commits por arreglo y las capturas del navegador.
 También está disponible en [PDF con las capturas incrustadas](ENTREGABLE.pdf).
 Las [evidencias por etapa](docs/evidencias/README.md) conservan también los fallos
-iniciales. El envío al campus sigue pendiente de acceso y revisión del equipo.
+iniciales. La entrega es individual y su autor se encarga personalmente de subirla al campus.
 
 ## Puesta en marcha
 
@@ -79,7 +79,7 @@ Las pruebas importan los componentes con el alias `@impl`, que `vite.config.js` 
 
 | Ruta | Para qué |
 |---|---|
-| `src/components/` | **Equipo (Partes 1 a 3):** `Button`, `HashConfirm` e `Inbox` completados; `PlanCard` original conservado |
+| `src/components/` | **Implementación principal (Partes 1 a 3):** `Button`, `HashConfirm` e `Inbox` completados; `PlanCard` original conservado |
 | `src/ai/` | La versión «escrita por una IA» de los cuatro componentes (Parte 4) |
 | `src/data/plans.js` | Los seis planes del agente, con el formato de la semana 8 |
 | `src/lib/` | Utilidades ya escritas: el nombre del destino de un plan y la lectura y escritura segura de `localStorage` |

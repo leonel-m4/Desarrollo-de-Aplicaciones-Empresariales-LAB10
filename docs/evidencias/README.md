@@ -17,7 +17,7 @@ del navegador y las capturas usadas en `../../ENTREGABLE.md`.
 - [Comprobaciones del navegador](navegador.md).
 - [Reproducción del algoritmo de hash de la S08](02-hashes-s08.json).
 - [Consola del error intencional, ya deshecho](13-error-intencional.txt).
-- [Equipo final: 61/61](16-team-final.txt).
+- [Implementación principal: 61/61](16-team-final.txt).
 - [IA final: 61/61](16-ai-final.txt).
 - [Compilación](16-build.txt).
 

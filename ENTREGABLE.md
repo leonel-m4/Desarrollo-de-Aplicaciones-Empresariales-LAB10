@@ -1,18 +1,20 @@
 # Laboratorio S10 — Bandeja de aprobaciones
 
-**Repositorio del equipo:** [Desarrollo-de-Aplicaciones-Empresariales-LAB10](https://github.com/leonel-m4/Desarrollo-de-Aplicaciones-Empresariales-LAB10), rama `main`.
+**Repositorio:** [Desarrollo-de-Aplicaciones-Empresariales-LAB10](https://github.com/leonel-m4/Desarrollo-de-Aplicaciones-Empresariales-LAB10), rama `main`.
+
+**Modalidad:** entrega individual.
 
 **Fecha de las comprobaciones:** 13/11/2026, hora local UTC−05:00.
 
-**Resultado:** versión del equipo **61/61**, versión IA corregida **61/61**, compilación correcta. Las pruebas, los seis planes, `App.jsx` y la versión final de `src/components/PlanCard.jsx` se conservaron sin cambios respecto del laboratorio original.
+**Resultado:** implementación principal (modo `team`) **61/61**, versión IA corregida **61/61**, compilación correcta. Las pruebas, los seis planes, `App.jsx` y la versión final de `src/components/PlanCard.jsx` se conservaron sin cambios respecto del laboratorio original.
 
-**Autoría y alcance:** trabajo realizado con asistencia de IA, declarada en el punto 16. Las comprobaciones del navegador se ejecutaron con clics y escritura automatizados sobre la aplicación real, no sobre una maqueta ni únicamente en jsdom. No se atribuyen a comprobaciones manuales hechas personalmente por el alumno. Los nombres de los integrantes y la fecha límite no fueron proporcionados y deben verificarse antes de presentar el trabajo.
+**Autoría y alcance:** entrega individual realizada con asistencia de IA, declarada en el punto 16. Las comprobaciones del navegador se ejecutaron con clics y escritura automatizados sobre la aplicación real, no sobre una maqueta ni únicamente en jsdom. No se atribuyen a comprobaciones manuales hechas personalmente por el alumno. El autor se encarga personalmente de la presentación en el campus virtual.
 
 Las salidas completas están en [docs/evidencias](docs/evidencias/README.md). Los JSON de Vitest contienen el resultado individual de cada prueba; los TXT conservan la salida original, incluidos espacios y secuencias de color de la terminal.
 
 ## 1. Instalación y observación inicial
 
-Se descargó `Hellscythe25/dae-s10-bandeja-aprobaciones` y se incorporaron sus 31 archivos a la raíz del repositorio del equipo, conservando el `.git` de este último. El punto de partida quedó en el commit `0a456bf`.
+Se descargó `Hellscythe25/dae-s10-bandeja-aprobaciones` y se incorporaron sus 31 archivos a la raíz del repositorio de esta entrega, conservando el `.git` de este último. El punto de partida quedó en el commit `0a456bf`.
 
 ```text
 node -v
@@ -59,7 +61,7 @@ La aplicación se abrió en **http://localhost:5173/**. Los parámetros mantiene
 
 ### Comparación real con la S08
 
-Se consultó el repositorio público del equipo [LAB08, commit `0e29dfa7ba15853d38ecab8db648be02a4a00337`](https://github.com/leonel-m4/Desarrollo-de-Aplicaciones-Empresariales-LAB08/tree/0e29dfa7ba15853d38ecab8db648be02a4a00337). Fue una **revisión de código**, no una ejecución de su servidor ni de sus pruebas.
+Se consultó el repositorio público [LAB08, commit `0e29dfa7ba15853d38ecab8db648be02a4a00337`](https://github.com/leonel-m4/Desarrollo-de-Aplicaciones-Empresariales-LAB08/tree/0e29dfa7ba15853d38ecab8db648be02a4a00337). Fue una **revisión de código**, no una ejecución de su servidor ni de sus pruebas.
 
 En [`agent/gateway.py`, líneas 110–112](https://github.com/leonel-m4/Desarrollo-de-Aplicaciones-Empresariales-LAB08/blob/0e29dfa7ba15853d38ecab8db648be02a4a00337/agent/gateway.py#L110-L112), el hash se calcula así:
 
@@ -245,7 +247,7 @@ Volvieron **6 pendientes y 0 decididos**. El efecto recrea la clave con `{}`; qu
 
 ## 10. Pruebas de la IA original
 
-`npm run test:ai` utiliza el alias `@impl` hacia `src/ai/`. No cambia la aplicación servida por Vite, que sigue utilizando `src/components/`. La prueba de humo de `App` importa la aplicación directamente y sigue comprobando esa composición del equipo.
+`npm run test:ai` utiliza el alias `@impl` hacia `src/ai/`. No cambia la aplicación servida por Vite, que sigue utilizando `src/components/`. La prueba de humo de `App` importa la aplicación directamente y sigue comprobando esa composición principal.
 
 | Archivo | Pasan | Fallan |
 | --- | ---: | ---: |
@@ -416,15 +418,15 @@ No hubo conversaciones ni resultados humanos inventados. Se recibió una solicit
 
 | Qué se le pidió a la IA | Qué produjo | Qué se aceptó o rechazó | Revisión y motivo |
 | --- | --- | --- | --- |
-| Completar Button, HashConfirm e Inbox conforme a los TODO | Código de variantes, entrada controlada, igualdad exacta, estado inmutable, derivados, búsqueda y efecto de persistencia | Se aceptó la implementación que pasó las pruebas; no se cambiaron expectativas para forzar el resultado | 12/12 Button, 12/12 HashConfirm y finalmente 61/61 de la versión del equipo |
+| Completar Button, HashConfirm e Inbox conforme a los TODO | Código de variantes, entrada controlada, igualdad exacta, estado inmutable, derivados, búsqueda y efecto de persistencia | Se aceptó la implementación que pasó las pruebas; no se cambiaron expectativas para forzar el resultado | 12/12 Button, 12/12 HashConfirm y finalmente 61/61 de la implementación principal |
 | Revisar los cuatro fallos de `src/ai/` | Diagnóstico con líneas, pruebas y correcciones separadas | Se rechazaron la llamada al renderizar, la mutación, el estado duplicado y la comparación por subcadena del código original | Progresión observada: 50 → 52 → 58 → 59 → 61; un commit por corrección |
 | Provocar y explicar el error de evento | Cambio temporal y registro real del navegador | Se aceptó solo como experimento; se rechazó conservarlo en el proyecto final | Dos aprobaciones sin clic, advertencia de React; después se restauró el código y se limpiaron las decisiones |
 | Comparar con la S08 y explicar la seguridad | Lectura del código público fijado a un commit y recálculo de los seis hashes | Se aceptó la explicación contrastada; se rechazó considerar localStorage o el hash como autorización | Los seis hashes coinciden; se distinguió lectura de código de pruebas reales de la API, y permiso staff de permiso del agente |
-| Preparar el entregable y las evidencias | Este documento, salidas de Vitest y capturas reales | Se incluyen como trabajo asistido, no como una verificación personal del alumno ni como un envío al campus | El equipo debe revisar contenido, identificación académica y requisitos de entrega antes de presentarlo |
+| Preparar el entregable y las evidencias | Este documento, salidas de Vitest y capturas reales | Se incluyen como trabajo asistido, no como una verificación personal del alumno ni como un envío al campus | Entrega individual; el autor revisa y presenta personalmente el documento |
 
 ### Verificación final
 
-| Archivo | Equipo: pasan / fallan | IA corregida: pasan / fallan |
+| Archivo | Principal: pasan / fallan | IA corregida: pasan / fallan |
 | --- | ---: | ---: |
 | `App.test.jsx` | 2 / 0 | 2 / 0 |
 | `Button.test.jsx` | 12 / 0 | 12 / 0 |
@@ -436,7 +438,7 @@ No hubo conversaciones ni resultados humanos inventados. Se recibió una solicit
 
 Se repitieron las dos suites completas después de deshacer el experimento. No quedaron pruebas omitidas. `npm run build` compiló correctamente **36 módulos**.
 
-- [Salida final del equipo](docs/evidencias/16-team-final.txt).
+- [Salida final de la implementación principal](docs/evidencias/16-team-final.txt).
 - [Salida final de IA](docs/evidencias/16-ai-final.txt).
 - [Compilación](docs/evidencias/16-build.txt).
 - [Registro de comprobaciones de navegador](docs/evidencias/navegador.md).
@@ -451,8 +453,8 @@ npm run build
 npm run dev
 ```
 
-### Publicación y pendientes externos
+### Publicación y presentación individual
 
 El repositorio de entrega es el indicado al principio, rama `main`. Incluye los commits de la implementación, el estado IA original, cada arreglo, este documento y sus evidencias. La publicación se hace con un push normal, sin `--force`.
 
-**Pendiente del equipo:** revisar sus nombres y datos académicos y subir el entregable al campus virtual. No se proporcionaron enlace de la actividad, sesión de acceso ni fecha límite; **no se realizó ese envío ni se afirma que se haya entregado dentro de un plazo no conocido**. La advertencia de dependencias del punto 1 también permanece documentada; tener todas las pruebas en verde no equivale a una auditoría de seguridad completa.
+**Presentación:** el autor confirmó que esta entrega es individual y que se encarga personalmente de subir el entregable al campus virtual. Ese envío no forma parte del trabajo delegado al asistente y no se realizó desde esta sesión. La advertencia de dependencias del punto 1 también permanece documentada; tener todas las pruebas en verde no equivale a una auditoría de seguridad completa.
