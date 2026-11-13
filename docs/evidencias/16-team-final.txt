@@ -1,0 +1,36 @@
+
+> dae-s10-bandeja-aprobaciones@0.1.0 test
+> vitest run --mode team --reporter=default --reporter=json --outputFile=docs/evidencias/16-team-final.json --no-color
+
+
+ RUN  v3.2.7 C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10
+
+ Ô£ô src/test/App.test.jsx (2 tests) 589ms
+   Ô£ô App ┬À prueba de humo con los datos reales > dibuja el t├¡tulo y un plan por cada elemento de plans.js  568ms
+ Ô£ô src/test/untrusted.test.jsx (3 tests) 777ms
+   Ô£ô Texto de terceros: se muestra, no se obedece > no cambia ninguna decisi├│n: todo sigue pendiente y no se guarda nada  390ms
+ Ô£ô src/test/Button.test.jsx (12 tests) 1016ms
+   Ô£ô Button ┬À variantes y contenido > muestra su contenido (children) como texto del bot├│n  366ms
+ Ô£ô src/test/PlanCard.test.jsx (10 tests) 1602ms
+   Ô£ô PlanCard ┬À plan R1: decidir con un clic > ofrece Aprobar y Rechazar, sin pedir ning├║n hash  307ms
+   Ô£ô PlanCard ┬À plan R2: el hash va por HashConfirm > escribir el hash del plan y pulsar Aprobar avisa una vez con approved  436ms
+ Ô£ô src/test/HashConfirm.test.jsx (12 tests) 3511ms
+   Ô£ô HashConfirm ┬À la barrera del hash > pide un hash y ofrece el bot├│n Aprobar  454ms
+   Ô£ô HashConfirm ┬À la barrera del hash > Aprobar se habilita solo cuando lo escrito es exactamente el hash  639ms
+   Ô£ô HashConfirm ┬À la barrera del hash > no se habilita con el hash m├ís texto de sobra  363ms
+   Ô£ô HashConfirm ┬À la barrera del hash > no se habilita con texto antes del hash  309ms
+   Ô£ô HashConfirm ┬À la barrera del hash > se vuelve a deshabilitar si se borra una letra  331ms
+   Ô£ô HashConfirm ┬À entrada controlada y evento > con el hash exacto, un clic llama a onConfirm una vez  306ms
+ Ô£ô src/test/Inbox.test.jsx (22 tests) 5189ms
+   Ô£ô Inbox ┬À punto de partida > muestra todos los planes como pendientes y ninguno como decidido  650ms
+   Ô£ô Inbox ┬À decidir (estado y funciones que suben) > aprobar un plan R1 lo saca de Pendientes y lo pone en Decididos como Aprobado  388ms
+   Ô£ô Inbox ┬À decidir (estado y funciones que suben) > aprobar un plan R2 escribiendo su hash tambi├®n lo mueve a Decididos  557ms
+   Ô£ô Inbox ┬À contadores calculados > los contadores cuentan todos los pendientes, aunque la b├║squeda oculte algunos  324ms
+   Ô£ô Inbox ┬À no modifica lo que recibe > buscar y decidir no tocan el arreglo plans ni sus planes  383ms
+
+ Test Files  6 passed (6)
+      Tests  61 passed (61)
+   Start at  01:24:35
+   Duration  16.83s (transform 629ms, setup 8.22s, collect 10.89s, tests 12.68s, environment 34.63s, prepare 5.52s)
+
+JSON report written to C:/Users/Leonel/Desktop/Desarrollo-de-Aplicaciones-Empresariales-LAB10/docs/evidencias/16-team-final.json

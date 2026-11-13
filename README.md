@@ -11,6 +11,16 @@ solo ayuda a la persona a decidir bien.
 
 La guía del laboratorio (con su rúbrica) está en el campus virtual; aquí está el código.
 
+## Estado de la entrega
+
+Los componentes del equipo y los cuatro fallos de `src/ai/` están resueltos.
+Ambos modos de pruebas pasan **61/61** y `npm run build` compila correctamente.
+El [entregable de los 16 pasos](ENTREGABLE.md) incluye la comparación con la S08,
+la tabla de uso de IA, los commits por arreglo y las capturas del navegador.
+También está disponible en [PDF con las capturas incrustadas](ENTREGABLE.pdf).
+Las [evidencias por etapa](docs/evidencias/README.md) conservan también los fallos
+iniciales. El envío al campus sigue pendiente de acceso y revisión del equipo.
+
 ## Puesta en marcha
 
 Necesitas **Node 20.19 o superior** (o Node 22.12 o superior): `node -v`. En PowerShell:
@@ -20,16 +30,17 @@ npm install
 npm run dev        # abre la dirección que imprime (http://localhost:5173); déjalo corriendo
 ```
 
-En **otra terminal** vas a correr las pruebas. Al empezar, la bandeja se dibuja pero casi nada funciona: las pruebas
-fallan a propósito, y tu trabajo es ponerlas en verde.
+En **otra terminal** puedes correr las pruebas. En el estado inicial del laboratorio la bandeja se dibujaba,
+pero casi nada funcionaba y las pruebas fallaban a propósito. Esta entrega conserva la evidencia de ese inicio.
 
 ```powershell
-npm test           # tu código (src/components): 61 pruebas, 34 fallan al empezar
+npm test           # tu código (src/components): ahora pasan las 61; originalmente fallaban 34
 ```
 
 ## Las partes del laboratorio
 
-Cada parte tiene un comentario `TODO` en su archivo con lo que debes hacer. Después de cada una:
+En la versión inicial, cada parte tenía un comentario `TODO` con lo que había que hacer.
+La tabla conserva la guía de esas partes, ya completadas en esta entrega:
 
 | Parte | Archivo | Qué escribes | Comando |
 |---|---|---|---|
@@ -57,7 +68,7 @@ Un plan tiene la misma forma que el que devuelve la pasarela de la semana 8:
 |---|---|
 | `npm run dev` | Arranca la aplicación con recarga en vivo |
 | `npm test` | Corre las pruebas contra **tu código** (`src/components`) |
-| `npm run test:ai` | Corre las **mismas pruebas** contra la versión de la IA (`src/ai`). Deben fallar 11: es el material de la Parte 4 |
+| `npm run test:ai` | Corre las **mismas pruebas** contra la versión de la IA (`src/ai`). Ahora pasan 61; las 11 fallidas originales y sus correcciones están documentadas en el entregable |
 | `npm run test:solutions` | Solo existe en la copia del docente (necesita `teacher/solutions/`); en la tuya avisa de que no está disponible |
 | `npm run build` | Compila la aplicación en `dist/` (comprueba que el proyecto no está roto) |
 
@@ -68,7 +79,7 @@ Las pruebas importan los componentes con el alias `@impl`, que `vite.config.js` 
 
 | Ruta | Para qué |
 |---|---|
-| `src/components/` | **Tuyo (Partes 1 a 3):** `Button`, `HashConfirm` e `Inbox` por completar; `PlanCard` ya escrito |
+| `src/components/` | **Equipo (Partes 1 a 3):** `Button`, `HashConfirm` e `Inbox` completados; `PlanCard` original conservado |
 | `src/ai/` | La versión «escrita por una IA» de los cuatro componentes (Parte 4) |
 | `src/data/plans.js` | Los seis planes del agente, con el formato de la semana 8 |
 | `src/lib/` | Utilidades ya escritas: el nombre del destino de un plan y la lectura y escritura segura de `localStorage` |

@@ -1,0 +1,24 @@
+Fecha local: 2026-11-13T01:24:31.9733827-05:00
+Node: v24.21.0
+npm: 11.19.0
+Sistema: Microsoft Windows NT 10.0.19045.0
+Repositorio: https://github.com/leonel-m4/Desarrollo-de-Aplicaciones-Empresariales-LAB10.git
+Base inicial: 0a456bfb3f9753ec2864571679f8e1d8e4d388f0
+IA original preservada: ee98101
+Comando de instalacion ejecutado: npm install
+Resultado de instalacion: 157 paquetes instalados, 158 auditados; 3 vulnerabilidades (1 moderada, 2 criticas).
+Servidor activo: npm run dev -- --host 127.0.0.1 --port 5173 --strictPort
+URL comprobada: http://localhost:5173/
+S08 consultada: https://github.com/leonel-m4/Desarrollo-de-Aplicaciones-Empresariales-LAB08/tree/0e29dfa7ba15853d38ecab8db648be02a4a00337
+Alcance S08: lectura de codigo publico; no se ejecuto ni se hicieron peticiones de borrado a esa API.
+dae-s10-bandeja-aprobaciones@0.1.0 C:\Users\Leonel\Desktop\Desarrollo-de-Aplicaciones-Empresariales-LAB10
++-- @testing-library/jest-dom@6.9.1
++-- @testing-library/react@16.3.3
++-- @testing-library/user-event@14.6.8
++-- @vitejs/plugin-react@5.2.0
++-- jsdom@26.1.0
++-- react-dom@19.3.1
++-- react@19.3.1
++-- vite@7.3.7
+`-- vitest@3.2.7
+

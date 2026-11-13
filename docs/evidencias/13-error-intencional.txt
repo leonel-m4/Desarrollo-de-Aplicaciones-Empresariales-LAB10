@@ -1,0 +1,22 @@
+Experimento temporal: src/components/PlanCard.jsx, botón Aprobar de R1.
+
+Cambio aplicado solamente durante la observación:
+onClick={() => onDecide(plan.id, "approved")}
+por
+onClick={onDecide(plan.id, "approved")}
+
+Sin hacer clic, los planes P-03 y P-05 quedaron aprobados.
+Contadores: Pendientes: 4; Decididos: 2.
+Pendientes: P-01, P-02, P-04 y P-06.
+localStorage["dae-s10-decisions"]:
+{"P-03":"approved","P-05":"approved"}
+
+Mensaje literal devuelto por la consola del navegador (formato y argumentos):
+Cannot update a component (`%s`) while rendering a different component (`%s`). To locate the bad setState() call inside `%s`, follow the stack trace as described in https://react.dev/link/setstate-in-render Inbox PlanCard PlanCard
+
+Origen: http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=6b32fe29
+Línea: 12718; columna: 199.
+
+Los argumentos corresponden a Inbox, PlanCard y PlanCard respectivamente.
+El cambio se deshizo antes de la verificación final. Se eliminó solamente la
+clave dae-s10-decisions y se recargó para eliminar las decisiones no pedidas.

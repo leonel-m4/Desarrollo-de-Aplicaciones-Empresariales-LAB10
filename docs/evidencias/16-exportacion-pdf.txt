@@ -1,0 +1,12 @@
+ENTREGABLE.pdf se generó desde ENTREGABLE.md usando ConvertFrom-Markdown de
+PowerShell y la impresión PDF de Microsoft Edge en modo headless.
+
+Formato: A4; texto seleccionable; 15 páginas; dos capturas PNG incrustadas.
+Tamaño de la exportación: 519024 bytes.
+Las referencias relativas a las evidencias se transformaron en enlaces al
+repositorio del equipo en GitHub. No depende de imágenes externas para mostrar
+las dos capturas. No contiene encabezados ni pies con rutas de archivos locales.
+
+Se verificó la lectura del PDF con la herramienta de lectura de documentos,
+incluidas las tablas, los resultados de pruebas, las capturas y los pendientes.
+La exportación no cambia el código ni ejecuta nuevamente las pruebas.

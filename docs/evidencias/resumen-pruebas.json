@@ -1,0 +1,631 @@
+[
+  {
+    "report": "02-tests-iniciales.json",
+    "passed": 27,
+    "failed": 34,
+    "skipped": 0,
+    "files": [
+      {
+        "name": "App.test.jsx",
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "Button.test.jsx",
+        "passed": 6,
+        "failed": 6,
+        "skipped": 0,
+        "failures": [
+          "Button · variantes y contenido sin variante es primary",
+          "Button · variantes y contenido la variante primary se refleja en la clase CSS de la variante",
+          "Button · variantes y contenido la variante danger se refleja en la clase CSS de la variante",
+          "Button · variantes y contenido la variante ghost se refleja en la clase CSS de la variante",
+          "Button · variantes y contenido una variante no deja la clase de otra",
+          "Button · type y props reenviadas no envía un formulario por defecto (type=button)"
+        ]
+      },
+      {
+        "name": "HashConfirm.test.jsx",
+        "passed": 4,
+        "failed": 8,
+        "skipped": 0,
+        "failures": [
+          "HashConfirm · la barrera del hash Aprobar empieza deshabilitado",
+          "HashConfirm · la barrera del hash Aprobar se habilita solo cuando lo escrito es exactamente el hash",
+          "HashConfirm · la barrera del hash no se habilita con el hash más texto de sobra",
+          "HashConfirm · la barrera del hash no se habilita con texto antes del hash",
+          "HashConfirm · la barrera del hash distingue mayúsculas de minúsculas",
+          "HashConfirm · la barrera del hash se vuelve a deshabilitar si se borra una letra",
+          "HashConfirm · la barrera del hash si cambia el hash recibido, lo escrito deja de valer",
+          "HashConfirm · entrada controlada y evento con el hash incorrecto, hacer clic no llama a onConfirm"
+        ]
+      },
+      {
+        "name": "Inbox.test.jsx",
+        "passed": 2,
+        "failed": 20,
+        "skipped": 0,
+        "failures": [
+          "Inbox · decidir (estado y funciones que suben) aprobar un plan R1 lo saca de Pendientes y lo pone en Decididos como Aprobado",
+          "Inbox · decidir (estado y funciones que suben) rechazar un plan lo pone en Decididos como Rechazado",
+          "Inbox · decidir (estado y funciones que suben) aprobar un plan R2 escribiendo su hash también lo mueve a Decididos",
+          "Inbox · decidir (estado y funciones que suben) decidir un plan no toca a los demás",
+          "Inbox · decidir (estado y funciones que suben) acumula las decisiones: la segunda no borra la primera",
+          "Inbox · contadores calculados los contadores siguen a las decisiones",
+          "Inbox · contadores calculados los contadores cuentan todos los pendientes, aunque la búsqueda oculte algunos",
+          "Inbox · búsqueda (entrada controlada) filtra los pendientes por operación",
+          "Inbox · búsqueda (entrada controlada) filtra por el texto del destino sin distinguir mayúsculas",
+          "Inbox · búsqueda (entrada controlada) filtra por el título del destino",
+          "Inbox · búsqueda (entrada controlada) ignora los espacios al borde del texto",
+          "Inbox · búsqueda (entrada controlada) lo que se escribe aparece en el campo y, al borrarlo, vuelven todos los planes",
+          "Inbox · búsqueda (entrada controlada) solo filtra los pendientes: los decididos se siguen viendo",
+          "Inbox · estados vacíos y botón Limpiar búsqueda sin coincidencias dice «No hay planes que coincidan»",
+          "Inbox · estados vacíos y botón Limpiar búsqueda Limpiar búsqueda vacía el campo y devuelve los planes",
+          "Inbox · estados vacíos y botón Limpiar búsqueda si todo está decidido y no hay búsqueda, avisa de que no quedan pendientes",
+          "Inbox · persistencia en el navegador guarda las decisiones en localStorage (clave dae-s10-decisions)",
+          "Inbox · persistencia en el navegador al volver a montar la bandeja recupera lo decidido",
+          "Inbox · persistencia en el navegador empieza desde lo guardado: listas y contadores coinciden",
+          "Inbox · persistencia en el navegador ignora lo guardado de planes que ya no existen"
+        ]
+      },
+      {
+        "name": "PlanCard.test.jsx",
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "untrusted.test.jsx",
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "report": "03-button.json",
+    "passed": 12,
+    "failed": 0,
+    "skipped": 0,
+    "files": [
+      {
+        "name": "Button.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "report": "05-hashconfirm.json",
+    "passed": 12,
+    "failed": 0,
+    "skipped": 0,
+    "files": [
+      {
+        "name": "HashConfirm.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "report": "06-inbox-estado.json",
+    "passed": 2,
+    "failed": 20,
+    "skipped": 0,
+    "files": [
+      {
+        "name": "Inbox.test.jsx",
+        "passed": 2,
+        "failed": 20,
+        "skipped": 0,
+        "failures": [
+          "Inbox · decidir (estado y funciones que suben) aprobar un plan R1 lo saca de Pendientes y lo pone en Decididos como Aprobado",
+          "Inbox · decidir (estado y funciones que suben) rechazar un plan lo pone en Decididos como Rechazado",
+          "Inbox · decidir (estado y funciones que suben) aprobar un plan R2 escribiendo su hash también lo mueve a Decididos",
+          "Inbox · decidir (estado y funciones que suben) decidir un plan no toca a los demás",
+          "Inbox · decidir (estado y funciones que suben) acumula las decisiones: la segunda no borra la primera",
+          "Inbox · contadores calculados los contadores siguen a las decisiones",
+          "Inbox · contadores calculados los contadores cuentan todos los pendientes, aunque la búsqueda oculte algunos",
+          "Inbox · búsqueda (entrada controlada) filtra los pendientes por operación",
+          "Inbox · búsqueda (entrada controlada) filtra por el texto del destino sin distinguir mayúsculas",
+          "Inbox · búsqueda (entrada controlada) filtra por el título del destino",
+          "Inbox · búsqueda (entrada controlada) ignora los espacios al borde del texto",
+          "Inbox · búsqueda (entrada controlada) lo que se escribe aparece en el campo y, al borrarlo, vuelven todos los planes",
+          "Inbox · búsqueda (entrada controlada) solo filtra los pendientes: los decididos se siguen viendo",
+          "Inbox · estados vacíos y botón Limpiar búsqueda sin coincidencias dice «No hay planes que coincidan»",
+          "Inbox · estados vacíos y botón Limpiar búsqueda Limpiar búsqueda vacía el campo y devuelve los planes",
+          "Inbox · estados vacíos y botón Limpiar búsqueda si todo está decidido y no hay búsqueda, avisa de que no quedan pendientes",
+          "Inbox · persistencia en el navegador guarda las decisiones en localStorage (clave dae-s10-decisions)",
+          "Inbox · persistencia en el navegador al volver a montar la bandeja recupera lo decidido",
+          "Inbox · persistencia en el navegador empieza desde lo guardado: listas y contadores coinciden",
+          "Inbox · persistencia en el navegador ignora lo guardado de planes que ya no existen"
+        ]
+      }
+    ]
+  },
+  {
+    "report": "07-inbox-derivados.json",
+    "passed": 11,
+    "failed": 11,
+    "skipped": 0,
+    "files": [
+      {
+        "name": "Inbox.test.jsx",
+        "passed": 11,
+        "failed": 11,
+        "skipped": 0,
+        "failures": [
+          "Inbox · contadores calculados los contadores cuentan todos los pendientes, aunque la búsqueda oculte algunos",
+          "Inbox · búsqueda (entrada controlada) filtra los pendientes por operación",
+          "Inbox · búsqueda (entrada controlada) filtra por el texto del destino sin distinguir mayúsculas",
+          "Inbox · búsqueda (entrada controlada) filtra por el título del destino",
+          "Inbox · búsqueda (entrada controlada) ignora los espacios al borde del texto",
+          "Inbox · búsqueda (entrada controlada) lo que se escribe aparece en el campo y, al borrarlo, vuelven todos los planes",
+          "Inbox · búsqueda (entrada controlada) solo filtra los pendientes: los decididos se siguen viendo",
+          "Inbox · estados vacíos y botón Limpiar búsqueda sin coincidencias dice «No hay planes que coincidan»",
+          "Inbox · estados vacíos y botón Limpiar búsqueda Limpiar búsqueda vacía el campo y devuelve los planes",
+          "Inbox · persistencia en el navegador guarda las decisiones en localStorage (clave dae-s10-decisions)",
+          "Inbox · persistencia en el navegador al volver a montar la bandeja recupera lo decidido"
+        ]
+      }
+    ]
+  },
+  {
+    "report": "08-inbox-busqueda.json",
+    "passed": 10,
+    "failed": 0,
+    "skipped": 12,
+    "files": [
+      {
+        "name": "Inbox.test.jsx",
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "report": "09-team-completo.json",
+    "passed": 61,
+    "failed": 0,
+    "skipped": 0,
+    "files": [
+      {
+        "name": "App.test.jsx",
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "Button.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "HashConfirm.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "Inbox.test.jsx",
+        "passed": 22,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "PlanCard.test.jsx",
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "untrusted.test.jsx",
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "report": "10-ai-original.json",
+    "passed": 50,
+    "failed": 11,
+    "skipped": 0,
+    "files": [
+      {
+        "name": "App.test.jsx",
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "Button.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "HashConfirm.test.jsx",
+        "passed": 10,
+        "failed": 2,
+        "skipped": 0,
+        "failures": [
+          "HashConfirm · la barrera del hash no se habilita con el hash más texto de sobra",
+          "HashConfirm · la barrera del hash no se habilita con texto antes del hash"
+        ]
+      },
+      {
+        "name": "Inbox.test.jsx",
+        "passed": 14,
+        "failed": 8,
+        "skipped": 0,
+        "failures": [
+          "Inbox · decidir (estado y funciones que suben) aprobar un plan R1 lo saca de Pendientes y lo pone en Decididos como Aprobado",
+          "Inbox · decidir (estado y funciones que suben) rechazar un plan lo pone en Decididos como Rechazado",
+          "Inbox · decidir (estado y funciones que suben) aprobar un plan R2 escribiendo su hash también lo mueve a Decididos",
+          "Inbox · decidir (estado y funciones que suben) decidir un plan no toca a los demás",
+          "Inbox · decidir (estado y funciones que suben) acumula las decisiones: la segunda no borra la primera",
+          "Inbox · contadores calculados los contadores siguen a las decisiones",
+          "Inbox · estados vacíos y botón Limpiar búsqueda sin coincidencias dice «No hay planes que coincidan»",
+          "Inbox · estados vacíos y botón Limpiar búsqueda Limpiar búsqueda vacía el campo y devuelve los planes"
+        ]
+      },
+      {
+        "name": "PlanCard.test.jsx",
+        "passed": 9,
+        "failed": 1,
+        "skipped": 0,
+        "failures": [
+          "PlanCard · es controlada por el padre tras decidir no se marca como decidida por su cuenta: solo avisa"
+        ]
+      },
+      {
+        "name": "untrusted.test.jsx",
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "report": "12-ai-01-evento.json",
+    "passed": 52,
+    "failed": 9,
+    "skipped": 0,
+    "files": [
+      {
+        "name": "App.test.jsx",
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "Button.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "HashConfirm.test.jsx",
+        "passed": 10,
+        "failed": 2,
+        "skipped": 0,
+        "failures": [
+          "HashConfirm · la barrera del hash no se habilita con el hash más texto de sobra",
+          "HashConfirm · la barrera del hash no se habilita con texto antes del hash"
+        ]
+      },
+      {
+        "name": "Inbox.test.jsx",
+        "passed": 16,
+        "failed": 6,
+        "skipped": 0,
+        "failures": [
+          "Inbox · decidir (estado y funciones que suben) aprobar un plan R1 lo saca de Pendientes y lo pone en Decididos como Aprobado",
+          "Inbox · decidir (estado y funciones que suben) rechazar un plan lo pone en Decididos como Rechazado",
+          "Inbox · decidir (estado y funciones que suben) aprobar un plan R2 escribiendo su hash también lo mueve a Decididos",
+          "Inbox · decidir (estado y funciones que suben) decidir un plan no toca a los demás",
+          "Inbox · decidir (estado y funciones que suben) acumula las decisiones: la segunda no borra la primera",
+          "Inbox · contadores calculados los contadores siguen a las decisiones"
+        ]
+      },
+      {
+        "name": "PlanCard.test.jsx",
+        "passed": 9,
+        "failed": 1,
+        "skipped": 0,
+        "failures": [
+          "PlanCard · es controlada por el padre tras decidir no se marca como decidida por su cuenta: solo avisa"
+        ]
+      },
+      {
+        "name": "untrusted.test.jsx",
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "report": "12-ai-02-inmutabilidad.json",
+    "passed": 58,
+    "failed": 3,
+    "skipped": 0,
+    "files": [
+      {
+        "name": "App.test.jsx",
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "Button.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "HashConfirm.test.jsx",
+        "passed": 10,
+        "failed": 2,
+        "skipped": 0,
+        "failures": [
+          "HashConfirm · la barrera del hash no se habilita con el hash más texto de sobra",
+          "HashConfirm · la barrera del hash no se habilita con texto antes del hash"
+        ]
+      },
+      {
+        "name": "Inbox.test.jsx",
+        "passed": 22,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "PlanCard.test.jsx",
+        "passed": 9,
+        "failed": 1,
+        "skipped": 0,
+        "failures": [
+          "PlanCard · es controlada por el padre tras decidir no se marca como decidida por su cuenta: solo avisa"
+        ]
+      },
+      {
+        "name": "untrusted.test.jsx",
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "report": "12-ai-03-estado-hijo.json",
+    "passed": 59,
+    "failed": 2,
+    "skipped": 0,
+    "files": [
+      {
+        "name": "App.test.jsx",
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "Button.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "HashConfirm.test.jsx",
+        "passed": 10,
+        "failed": 2,
+        "skipped": 0,
+        "failures": [
+          "HashConfirm · la barrera del hash no se habilita con el hash más texto de sobra",
+          "HashConfirm · la barrera del hash no se habilita con texto antes del hash"
+        ]
+      },
+      {
+        "name": "Inbox.test.jsx",
+        "passed": 22,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "PlanCard.test.jsx",
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "untrusted.test.jsx",
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "report": "12-ai-04-hash-exacto.json",
+    "passed": 61,
+    "failed": 0,
+    "skipped": 0,
+    "files": [
+      {
+        "name": "App.test.jsx",
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "Button.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "HashConfirm.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "Inbox.test.jsx",
+        "passed": 22,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "PlanCard.test.jsx",
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "untrusted.test.jsx",
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "report": "16-ai-final.json",
+    "passed": 61,
+    "failed": 0,
+    "skipped": 0,
+    "files": [
+      {
+        "name": "App.test.jsx",
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "Button.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "HashConfirm.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "Inbox.test.jsx",
+        "passed": 22,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "PlanCard.test.jsx",
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "untrusted.test.jsx",
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "report": "16-team-final.json",
+    "passed": 61,
+    "failed": 0,
+    "skipped": 0,
+    "files": [
+      {
+        "name": "App.test.jsx",
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "Button.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "HashConfirm.test.jsx",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "Inbox.test.jsx",
+        "passed": 22,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "PlanCard.test.jsx",
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      },
+      {
+        "name": "untrusted.test.jsx",
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "failures": []
+      }
+    ]
+  }
+]
